@@ -1,0 +1,3497 @@
+ASSPTMR cell POLARPRO_III kfactor 1.00  
+
+PORT DELAY {
+  
+pin("Sys_PKfb_Clk") {
+	direction : input ;
+	capacitance : 0.035743 ;
+} 
+
+pin("Sys_PKfb_Rst") {
+	direction : output ;
+	capacitance : 0.068536 ;
+} 
+
+pin("Sys_Clk0") {
+	direction : output ;
+	capacitance : 0.066657 ;
+} 
+
+pin("Sys_Clk0_Rst") {
+	direction : output ;
+	capacitance : 0.066966 ;
+} 
+
+pin("Sys_Clk1") {
+	direction : output ;
+	capacitance : 0.066840 ;
+} 
+
+pin("Sys_Clk1_Rst") {
+	direction : output ;
+	capacitance : 0.067755 ;
+} 
+
+pin("FB_Busy") {
+	direction : input ;
+	capacitance : 0.010927 ;
+} 
+pin("FB_PKfbData[31]") {
+	direction : input ;
+	capacitance : 0.005438 ;
+} 
+
+pin("FB_PKfbData[30]") {
+	direction : input ;
+	capacitance : 0.003655 ;
+} 
+
+pin("FB_PKfbData[29]") {
+	direction : input ;
+	capacitance : 0.005137 ;
+} 
+
+pin("FB_PKfbData[28]") {
+	direction : input ;
+	capacitance : 0.004538 ;
+} 
+
+pin("FB_PKfbData[27]") {
+	direction : input ;
+	capacitance : 0.004338 ;
+} 
+
+pin("FB_PKfbData[26]") {
+	direction : input ;
+	capacitance : 0.003706 ;
+} 
+
+pin("FB_PKfbData[25]") {
+	direction : input ;
+	capacitance : 0.004989 ;
+} 
+
+pin("FB_PKfbData[24]") {
+	direction : input ;
+	capacitance : 0.005156 ;
+} 
+
+pin("FB_PKfbData[23]") {
+	direction : input ;
+	capacitance : 0.003559 ;
+} 
+
+pin("FB_PKfbData[22]") {
+	direction : input ;
+	capacitance : 0.004856 ;
+} 
+
+pin("FB_PKfbData[21]") {
+	direction : input ;
+	capacitance : 0.005858 ;
+} 
+
+pin("FB_PKfbData[20]") {
+	direction : input ;
+	capacitance : 0.002156 ;
+} 
+
+pin("FB_PKfbData[19]") {
+	direction : input ;
+	capacitance : 0.011443 ;
+} 
+
+pin("FB_PKfbData[18]") {
+	direction : input ;
+	capacitance : 0.023961 ;
+} 
+
+pin("FB_PKfbData[17]") {
+	direction : input ;
+	capacitance : 0.020237 ;
+} 
+
+pin("FB_PKfbData[16]") {
+	direction : input ;
+	capacitance : 0.024608 ;
+} 
+
+pin("FB_PKfbData[15]") {
+	direction : input ;
+	capacitance : 0.022504 ;
+} 
+
+pin("FB_PKfbData[14]") {
+	direction : input ;
+	capacitance : 0.012744 ;
+} 
+
+pin("FB_PKfbData[13]") {
+	direction : input ;
+	capacitance : 0.013108 ;
+} 
+
+pin("FB_PKfbData[12]") {
+	direction : input ;
+	capacitance : 0.012387 ;
+} 
+
+pin("FB_PKfbData[11]") {
+	direction : input ;
+	capacitance : 0.019028 ;
+} 
+
+pin("FB_PKfbData[10]") {
+	direction : input ;
+	capacitance : 0.014261 ;
+} 
+
+pin("FB_PKfbData[9]") {
+	direction : input ;
+	capacitance : 0.002257 ;
+} 
+
+pin("FB_PKfbData[8]") {
+	direction : input ;
+	capacitance : 0.013993 ;
+} 
+
+pin("FB_PKfbData[7]") {
+	direction : input ;
+	capacitance : 0.014372 ;
+} 
+
+pin("FB_PKfbData[6]") {
+	direction : input ;
+	capacitance : 0.011784 ;
+} 
+
+pin("FB_PKfbData[5]") {
+	direction : input ;
+	capacitance : 0.002239 ;
+} 
+
+pin("FB_PKfbData[4]") {
+	direction : input ;
+	capacitance : 0.023820 ;
+} 
+
+pin("FB_PKfbData[3]") {
+	direction : input ;
+	capacitance : 0.021066 ;
+} 
+
+pin("FB_PKfbData[2]") {
+	direction : input ;
+	capacitance : 0.020179 ;
+} 
+
+pin("FB_PKfbData[1]") {
+	direction : input ;
+	capacitance : 0.013961 ;
+} 
+
+pin("FB_PKfbData[0]") {
+	direction : input ;
+	capacitance : 0.012122 ;
+} 
+pin("FB_PKfbPush[3]") {
+	direction : input ;
+	capacitance : 0.019301 ;
+} 
+
+pin("FB_PKfbPush[2]") {
+	direction : input ;
+	capacitance : 0.012287 ;
+} 
+
+pin("FB_PKfbPush[1]") {
+	direction : input ;
+	capacitance : 0.014670 ;
+} 
+
+pin("FB_PKfbPush[0]") {
+	direction : input ;
+	capacitance : 0.017626 ;
+} 
+pin("FB_PKfbSOF") {
+	direction : input ;
+	capacitance : 0.011495 ;
+} 
+
+pin("FB_PKfbEOF") {
+	direction : input ;
+	capacitance : 0.005927 ;
+} 
+
+pin("FB_PKfbOverflow") {
+	direction : output ;
+	capacitance : 0.066818 ;
+	timing () {
+		related_pin : "FB_PKfbPush[0]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 4.831954  ;
+		intrinsic_rise_max : 4.834702  ;
+		rise_transition : 0.072584  ;
+		intrinsic_fall_min : 4.853729  ;
+		intrinsic_fall_max : 4.861454  ;
+		fall_transition : 0.081357  ;
+	} 
+
+
+	timing () {
+		related_pin : "FB_PKfbPush[1]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 4.238750  ;
+		intrinsic_rise_max : 4.241451  ;
+		rise_transition : 0.072584  ;
+		intrinsic_fall_min : 4.503347  ;
+		intrinsic_fall_max : 4.511233  ;
+		fall_transition : 0.081357  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "FB_PKfbPush[2]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 4.285149  ;
+		intrinsic_rise_max : 4.290056  ;
+		rise_transition : 0.072584  ;
+		intrinsic_fall_min : 4.426477  ;
+		intrinsic_fall_max : 4.435715  ;
+		fall_transition : 0.081357  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "FB_PKfbPush[3]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 3.930778  ;
+		intrinsic_rise_max : 3.933189  ;
+		rise_transition : 0.072584  ;
+		intrinsic_fall_min : 4.155366  ;
+		intrinsic_fall_max : 4.163132  ;
+		fall_transition : 0.081357  ;
+
+	} 
+
+
+} 
+pin("FB_msg_out[3]") {
+	direction : input ;
+	capacitance : 0.146630 ;
+} 
+
+pin("FB_msg_out[2]") {
+	direction : input ;
+	capacitance : 0.126619 ;
+} 
+
+pin("FB_msg_out[1]") {
+	direction : input ;
+	capacitance : 0.120125 ;
+} 
+
+pin("FB_msg_out[0]") {
+	direction : input ;
+	capacitance : 0.100923 ;
+} 
+pin("Sensor_Int[7]") {
+	direction : output ;
+	capacitance : 0.066786 ;
+} 
+
+pin("Sensor_Int[6]") {
+	direction : output ;
+	capacitance : 0.066724 ;
+} 
+
+pin("Sensor_Int[5]") {
+	direction : output ;
+	capacitance : 0.067295 ;
+} 
+
+pin("Sensor_Int[4]") {
+	direction : output ;
+	capacitance : 0.067109 ;
+} 
+
+pin("Sensor_Int[3]") {
+	direction : output ;
+	capacitance : 0.069418 ;
+} 
+
+pin("Sensor_Int[2]") {
+	direction : output ;
+	capacitance : 0.067137 ;
+} 
+
+pin("Sensor_Int[1]") {
+	direction : output ;
+	capacitance : 0.067545 ;
+} 
+
+pin("Sensor_Int[0]") {
+	direction : output ;
+	capacitance : 0.073606 ;
+} 
+pin("FB_Int_Clr[7]") {
+	direction : input ;
+	capacitance : 0.017600 ;
+} 
+
+pin("FB_Int_Clr[6]") {
+	direction : input ;
+	capacitance : 0.010992 ;
+} 
+
+pin("FB_Int_Clr[5]") {
+	direction : input ;
+	capacitance : 0.008758 ;
+} 
+
+pin("FB_Int_Clr[4]") {
+	direction : input ;
+	capacitance : 0.009132 ;
+} 
+
+pin("FB_Int_Clr[3]") {
+	direction : input ;
+	capacitance : 0.012155 ;
+} 
+
+pin("FB_Int_Clr[2]") {
+	direction : input ;
+	capacitance : 0.014618 ;
+} 
+
+pin("FB_Int_Clr[1]") {
+	direction : input ;
+	capacitance : 0.009811 ;
+} 
+
+pin("FB_Int_Clr[0]") {
+	direction : input ;
+	capacitance : 0.010702 ;
+} 
+pin("FB_Start") {
+	direction : output ;
+	capacitance : 0.065595 ;
+} 
+pin("TimeStamp[23]") {
+	direction : output ;
+	capacitance : 0.066640 ;
+} 
+
+pin("TimeStamp[22]") {
+	direction : output ;
+	capacitance : 0.067115 ;
+} 
+
+pin("TimeStamp[21]") {
+	direction : output ;
+	capacitance : 0.066651 ;
+} 
+
+pin("TimeStamp[20]") {
+	direction : output ;
+	capacitance : 0.067174 ;
+} 
+
+pin("TimeStamp[19]") {
+	direction : output ;
+	capacitance : 0.068214 ;
+} 
+
+pin("TimeStamp[18]") {
+	direction : output ;
+	capacitance : 0.066697 ;
+} 
+
+pin("TimeStamp[17]") {
+	direction : output ;
+	capacitance : 0.067345 ;
+} 
+
+pin("TimeStamp[16]") {
+	direction : output ;
+	capacitance : 0.066869 ;
+} 
+
+pin("TimeStamp[15]") {
+	direction : output ;
+	capacitance : 0.066787 ;
+} 
+
+pin("TimeStamp[14]") {
+	direction : output ;
+	capacitance : 0.066620 ;
+} 
+
+pin("TimeStamp[13]") {
+	direction : output ;
+	capacitance : 0.066920 ;
+} 
+
+pin("TimeStamp[12]") {
+	direction : output ;
+	capacitance : 0.066813 ;
+} 
+
+pin("TimeStamp[11]") {
+	direction : output ;
+	capacitance : 0.067484 ;
+} 
+
+pin("TimeStamp[10]") {
+	direction : output ;
+	capacitance : 0.066885 ;
+} 
+
+pin("TimeStamp[9]") {
+	direction : output ;
+	capacitance : 0.066873 ;
+} 
+
+pin("TimeStamp[8]") {
+	direction : output ;
+	capacitance : 0.067988 ;
+} 
+
+pin("TimeStamp[7]") {
+	direction : output ;
+	capacitance : 0.066859 ;
+} 
+
+pin("TimeStamp[6]") {
+	direction : output ;
+	capacitance : 0.067916 ;
+} 
+
+pin("TimeStamp[5]") {
+	direction : output ;
+	capacitance : 0.066749 ;
+} 
+
+pin("TimeStamp[4]") {
+	direction : output ;
+	capacitance : 0.067228 ;
+} 
+
+pin("TimeStamp[3]") {
+	direction : output ;
+	capacitance : 0.066701 ;
+} 
+
+pin("TimeStamp[2]") {
+	direction : output ;
+	capacitance : 0.066949 ;
+} 
+
+pin("TimeStamp[1]") {
+	direction : output ;
+	capacitance : 0.066542 ;
+} 
+
+pin("TimeStamp[0]") {
+	direction : output ;
+	capacitance : 0.067038 ;
+} 
+pin("WBs_ADR[16]") {
+	direction : output ;
+	capacitance : 0.066147 ;
+} 
+
+pin("WBs_ADR[15]") {
+	direction : output ;
+	capacitance : 0.067747 ;
+} 
+
+pin("WBs_ADR[14]") {
+	direction : output ;
+	capacitance : 0.067995 ;
+} 
+
+pin("WBs_ADR[13]") {
+	direction : output ;
+	capacitance : 0.066459 ;
+} 
+
+pin("WBs_ADR[12]") {
+	direction : output ;
+	capacitance : 0.067965 ;
+} 
+
+pin("WBs_ADR[11]") {
+	direction : output ;
+	capacitance : 0.068605 ;
+} 
+
+pin("WBs_ADR[10]") {
+	direction : output ;
+	capacitance : 0.068464 ;
+} 
+
+pin("WBs_ADR[9]") {
+	direction : output ;
+	capacitance : 0.066823 ;
+} 
+
+pin("WBs_ADR[8]") {
+	direction : output ;
+	capacitance : 0.067615 ;
+} 
+
+pin("WBs_ADR[7]") {
+	direction : output ;
+	capacitance : 0.067062 ;
+} 
+
+pin("WBs_ADR[6]") {
+	direction : output ;
+	capacitance : 0.066895 ;
+} 
+
+pin("WBs_ADR[5]") {
+	direction : output ;
+	capacitance : 0.066537 ;
+} 
+
+pin("WBs_ADR[4]") {
+	direction : output ;
+	capacitance : 0.066482 ;
+} 
+
+pin("WBs_ADR[3]") {
+	direction : output ;
+	capacitance : 0.068356 ;
+} 
+
+pin("WBs_ADR[2]") {
+	direction : output ;
+	capacitance : 0.066825 ;
+} 
+
+pin("WBs_ADR[1]") {
+	direction : output ;
+	capacitance : 0.066320 ;
+} 
+
+pin("WBs_ADR[0]") {
+	direction : output ;
+	capacitance : 0.065948 ;
+} 
+pin("WBs_CYC") {
+	direction : output ;
+	capacitance : 0.066493 ;
+} 
+pin("WBs_BYTE_STB[3]") {
+	direction : output ;
+	capacitance : 0.066502 ;
+} 
+
+pin("WBs_BYTE_STB[2]") {
+	direction : output ;
+	capacitance : 0.067809 ;
+} 
+
+pin("WBs_BYTE_STB[1]") {
+	direction : output ;
+	capacitance : 0.067451 ;
+} 
+
+pin("WBs_BYTE_STB[0]") {
+	direction : output ;
+	capacitance : 0.067321 ;
+} 
+pin("WBs_WE") {
+	direction : output ;
+	capacitance : 0.068240 ;
+} 
+
+pin("WBs_RD") {
+	direction : output ;
+	capacitance : 0.067297 ;
+} 
+
+pin("WBs_STB") {
+	direction : output ;
+	capacitance : 0.066635 ;
+} 
+pin("WBs_WR_DAT[31]") {
+	direction : output ;
+	capacitance : 0.066414 ;
+} 
+
+pin("WBs_WR_DAT[30]") {
+	direction : output ;
+	capacitance : 0.067531 ;
+} 
+
+pin("WBs_WR_DAT[29]") {
+	direction : output ;
+	capacitance : 0.067511 ;
+} 
+
+pin("WBs_WR_DAT[28]") {
+	direction : output ;
+	capacitance : 0.067935 ;
+} 
+
+pin("WBs_WR_DAT[27]") {
+	direction : output ;
+	capacitance : 0.066703 ;
+} 
+
+pin("WBs_WR_DAT[26]") {
+	direction : output ;
+	capacitance : 0.067355 ;
+} 
+
+pin("WBs_WR_DAT[25]") {
+	direction : output ;
+	capacitance : 0.066891 ;
+} 
+
+pin("WBs_WR_DAT[24]") {
+	direction : output ;
+	capacitance : 0.067607 ;
+} 
+
+pin("WBs_WR_DAT[23]") {
+	direction : output ;
+	capacitance : 0.067487 ;
+} 
+
+pin("WBs_WR_DAT[22]") {
+	direction : output ;
+	capacitance : 0.066559 ;
+} 
+
+pin("WBs_WR_DAT[21]") {
+	direction : output ;
+	capacitance : 0.068593 ;
+} 
+
+pin("WBs_WR_DAT[20]") {
+	direction : output ;
+	capacitance : 0.066876 ;
+} 
+
+pin("WBs_WR_DAT[19]") {
+	direction : output ;
+	capacitance : 0.067657 ;
+} 
+
+pin("WBs_WR_DAT[18]") {
+	direction : output ;
+	capacitance : 0.066616 ;
+} 
+
+pin("WBs_WR_DAT[17]") {
+	direction : output ;
+	capacitance : 0.067069 ;
+} 
+
+pin("WBs_WR_DAT[16]") {
+	direction : output ;
+	capacitance : 0.066745 ;
+} 
+
+pin("WBs_WR_DAT[15]") {
+	direction : output ;
+	capacitance : 0.067821 ;
+} 
+
+pin("WBs_WR_DAT[14]") {
+	direction : output ;
+	capacitance : 0.067906 ;
+} 
+
+pin("WBs_WR_DAT[13]") {
+	direction : output ;
+	capacitance : 0.067915 ;
+} 
+
+pin("WBs_WR_DAT[12]") {
+	direction : output ;
+	capacitance : 0.067284 ;
+} 
+
+pin("WBs_WR_DAT[11]") {
+	direction : output ;
+	capacitance : 0.068400 ;
+} 
+
+pin("WBs_WR_DAT[10]") {
+	direction : output ;
+	capacitance : 0.067381 ;
+} 
+
+pin("WBs_WR_DAT[9]") {
+	direction : output ;
+	capacitance : 0.068303 ;
+} 
+
+pin("WBs_WR_DAT[8]") {
+	direction : output ;
+	capacitance : 0.068248 ;
+} 
+
+pin("WBs_WR_DAT[7]") {
+	direction : output ;
+	capacitance : 0.067683 ;
+} 
+
+pin("WBs_WR_DAT[6]") {
+	direction : output ;
+	capacitance : 0.066639 ;
+} 
+
+pin("WBs_WR_DAT[5]") {
+	direction : output ;
+	capacitance : 0.067659 ;
+} 
+
+pin("WBs_WR_DAT[4]") {
+	direction : output ;
+	capacitance : 0.066869 ;
+} 
+
+pin("WBs_WR_DAT[3]") {
+	direction : output ;
+	capacitance : 0.066648 ;
+} 
+
+pin("WBs_WR_DAT[2]") {
+	direction : output ;
+	capacitance : 0.066744 ;
+} 
+
+pin("WBs_WR_DAT[1]") {
+	direction : output ;
+	capacitance : 0.069314 ;
+} 
+
+pin("WBs_WR_DAT[0]") {
+	direction : output ;
+	capacitance : 0.066538 ;
+} 
+pin("WB_CLK") {
+	direction : input ;
+	capacitance : 0.042222 ;
+} 
+
+pin("WB_RST") {
+	direction : output ;
+	capacitance : 0.067336 ;
+} 
+pin("WBs_RD_DAT[31]") {
+	direction : input ;
+	capacitance : 0.008834 ;
+} 
+
+pin("WBs_RD_DAT[30]") {
+	direction : input ;
+	capacitance : 0.010404 ;
+} 
+
+pin("WBs_RD_DAT[29]") {
+	direction : input ;
+	capacitance : 0.010902 ;
+} 
+
+pin("WBs_RD_DAT[28]") {
+	direction : input ;
+	capacitance : 0.007574 ;
+} 
+
+pin("WBs_RD_DAT[27]") {
+	direction : input ;
+	capacitance : 0.011092 ;
+} 
+
+pin("WBs_RD_DAT[26]") {
+	direction : input ;
+	capacitance : 0.007131 ;
+} 
+
+pin("WBs_RD_DAT[25]") {
+	direction : input ;
+	capacitance : 0.010233 ;
+} 
+
+pin("WBs_RD_DAT[24]") {
+	direction : input ;
+	capacitance : 0.008203 ;
+} 
+
+pin("WBs_RD_DAT[23]") {
+	direction : input ;
+	capacitance : 0.012708 ;
+} 
+
+pin("WBs_RD_DAT[22]") {
+	direction : input ;
+	capacitance : 0.012566 ;
+} 
+
+pin("WBs_RD_DAT[21]") {
+	direction : input ;
+	capacitance : 0.012410 ;
+} 
+
+pin("WBs_RD_DAT[20]") {
+	direction : input ;
+	capacitance : 0.011266 ;
+} 
+
+pin("WBs_RD_DAT[19]") {
+	direction : input ;
+	capacitance : 0.007881 ;
+} 
+
+pin("WBs_RD_DAT[18]") {
+	direction : input ;
+	capacitance : 0.012369 ;
+} 
+
+pin("WBs_RD_DAT[17]") {
+	direction : input ;
+	capacitance : 0.009788 ;
+} 
+
+pin("WBs_RD_DAT[16]") {
+	direction : input ;
+	capacitance : 0.013172 ;
+} 
+
+pin("WBs_RD_DAT[15]") {
+	direction : input ;
+	capacitance : 0.007787 ;
+} 
+
+pin("WBs_RD_DAT[14]") {
+	direction : input ;
+	capacitance : 0.006701 ;
+} 
+
+pin("WBs_RD_DAT[13]") {
+	direction : input ;
+	capacitance : 0.006196 ;
+} 
+
+pin("WBs_RD_DAT[12]") {
+	direction : input ;
+	capacitance : 0.007452 ;
+} 
+
+pin("WBs_RD_DAT[11]") {
+	direction : input ;
+	capacitance : 0.003510 ;
+} 
+
+pin("WBs_RD_DAT[10]") {
+	direction : input ;
+	capacitance : 0.003821 ;
+} 
+
+pin("WBs_RD_DAT[9]") {
+	direction : input ;
+	capacitance : 0.004826 ;
+} 
+
+pin("WBs_RD_DAT[8]") {
+	direction : input ;
+	capacitance : 0.002889 ;
+} 
+
+pin("WBs_RD_DAT[7]") {
+	direction : input ;
+	capacitance : 0.005221 ;
+} 
+
+pin("WBs_RD_DAT[6]") {
+	direction : input ;
+	capacitance : 0.003823 ;
+} 
+
+pin("WBs_RD_DAT[5]") {
+	direction : input ;
+	capacitance : 0.005038 ;
+} 
+
+pin("WBs_RD_DAT[4]") {
+	direction : input ;
+	capacitance : 0.003408 ;
+} 
+
+pin("WBs_RD_DAT[3]") {
+	direction : input ;
+	capacitance : 0.002966 ;
+} 
+
+pin("WBs_RD_DAT[2]") {
+	direction : input ;
+	capacitance : 0.003344 ;
+} 
+
+pin("WBs_RD_DAT[1]") {
+	direction : input ;
+	capacitance : 0.005490 ;
+} 
+
+pin("WBs_RD_DAT[0]") {
+	direction : input ;
+	capacitance : 0.004355 ;
+} 
+pin("WBs_ACK") {
+	direction : input ;
+	capacitance : 0.004137 ;
+} 
+
+pin("Sys_Pclk") {
+	direction : output ;
+	capacitance : 0.066622 ;
+} 
+
+pin("Sys_Pclk_Rst") {
+	direction : output ;
+	capacitance : 0.067368 ;
+} 
+
+pin("Sys_PSel") {
+	direction : input ;
+	capacitance : 0.011050 ;
+} 
+pin("SPIm_Paddr[15]") {
+	direction : input ;
+	capacitance : 0.013974 ;
+} 
+
+pin("SPIm_Paddr[14]") {
+	direction : input ;
+	capacitance : 0.019549 ;
+} 
+
+pin("SPIm_Paddr[13]") {
+	direction : input ;
+	capacitance : 0.015362 ;
+} 
+
+pin("SPIm_Paddr[12]") {
+	direction : input ;
+	capacitance : 0.024764 ;
+} 
+
+pin("SPIm_Paddr[11]") {
+	direction : input ;
+	capacitance : 0.017333 ;
+} 
+
+pin("SPIm_Paddr[10]") {
+	direction : input ;
+	capacitance : 0.015788 ;
+} 
+
+pin("SPIm_Paddr[9]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_Paddr[8]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_Paddr[7]") {
+	direction : input ;
+	capacitance : 0.010478 ;
+} 
+
+pin("SPIm_Paddr[6]") {
+	direction : input ;
+	capacitance : 0.010046 ;
+} 
+
+pin("SPIm_Paddr[5]") {
+	direction : input ;
+	capacitance : 0.015678 ;
+} 
+
+pin("SPIm_Paddr[4]") {
+	direction : input ;
+	capacitance : 0.016433 ;
+} 
+
+pin("SPIm_Paddr[3]") {
+	direction : input ;
+	capacitance : 0.016997 ;
+} 
+
+pin("SPIm_Paddr[2]") {
+	direction : input ;
+	capacitance : 0.014259 ;
+} 
+
+pin("SPIm_Paddr[1]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_Paddr[0]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+pin("SPIm_PEnable") {
+	direction : input ;
+	capacitance : 0.010220 ;
+} 
+
+pin("SPIm_PWrite") {
+	direction : input ;
+	capacitance : 0.014393 ;
+} 
+pin("SPIm_PWdata[31]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_PWdata[30]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_PWdata[29]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_PWdata[28]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_PWdata[27]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_PWdata[26]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_PWdata[25]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_PWdata[24]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_PWdata[23]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_PWdata[22]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_PWdata[21]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_PWdata[20]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_PWdata[19]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_PWdata[18]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_PWdata[17]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_PWdata[16]") {
+	direction : input ;
+	capacitance : 0.000000 ;
+} 
+
+pin("SPIm_PWdata[15]") {
+	direction : input ;
+	capacitance : 0.005312 ;
+} 
+
+pin("SPIm_PWdata[14]") {
+	direction : input ;
+	capacitance : 0.006391 ;
+} 
+
+pin("SPIm_PWdata[13]") {
+	direction : input ;
+	capacitance : 0.004663 ;
+} 
+
+pin("SPIm_PWdata[12]") {
+	direction : input ;
+	capacitance : 0.004902 ;
+} 
+
+pin("SPIm_PWdata[11]") {
+	direction : input ;
+	capacitance : 0.006028 ;
+} 
+
+pin("SPIm_PWdata[10]") {
+	direction : input ;
+	capacitance : 0.005014 ;
+} 
+
+pin("SPIm_PWdata[9]") {
+	direction : input ;
+	capacitance : 0.006134 ;
+} 
+
+pin("SPIm_PWdata[8]") {
+	direction : input ;
+	capacitance : 0.014824 ;
+} 
+
+pin("SPIm_PWdata[7]") {
+	direction : input ;
+	capacitance : 0.003780 ;
+} 
+
+pin("SPIm_PWdata[6]") {
+	direction : input ;
+	capacitance : 0.003638 ;
+} 
+
+pin("SPIm_PWdata[5]") {
+	direction : input ;
+	capacitance : 0.006078 ;
+} 
+
+pin("SPIm_PWdata[4]") {
+	direction : input ;
+	capacitance : 0.022975 ;
+} 
+
+pin("SPIm_PWdata[3]") {
+	direction : input ;
+	capacitance : 0.004479 ;
+} 
+
+pin("SPIm_PWdata[2]") {
+	direction : input ;
+	capacitance : 0.004841 ;
+} 
+
+pin("SPIm_PWdata[1]") {
+	direction : input ;
+	capacitance : 0.005802 ;
+} 
+
+pin("SPIm_PWdata[0]") {
+	direction : input ;
+	capacitance : 0.020958 ;
+} 
+pin("SPIm_Prdata[31]") {
+	direction : output ;
+	capacitance : 0.067924 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.347981  ;
+		intrinsic_fall_max : 6.379024  ;
+		fall_transition : 0.074422  ;
+		intrinsic_rise_min : 6.505651  ;
+		intrinsic_rise_max : 6.529882  ;
+		rise_transition : 0.063824  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 7.058277  ;
+		intrinsic_fall_max : 7.089320  ;
+		fall_transition : 0.074422  ;
+		intrinsic_rise_min : 7.247687  ;
+		intrinsic_rise_max : 7.271918  ;
+		rise_transition : 0.063824  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.777262  ;
+		intrinsic_rise_max : 6.801494  ;
+		rise_transition : 0.063824  ;
+		intrinsic_fall_min : 6.403710  ;
+		intrinsic_fall_max : 6.434762  ;
+		fall_transition : 0.074422  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[30]") {
+	direction : output ;
+	capacitance : 0.066692 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 5.554485  ;
+		intrinsic_fall_max : 5.570697  ;
+		fall_transition : 0.074079  ;
+		intrinsic_rise_min : 5.802752  ;
+		intrinsic_rise_max : 5.816206  ;
+		rise_transition : 0.062987  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.264780  ;
+		intrinsic_fall_max : 6.280992  ;
+		fall_transition : 0.074079  ;
+		intrinsic_rise_min : 6.544788  ;
+		intrinsic_rise_max : 6.558242  ;
+		rise_transition : 0.062987  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.074362  ;
+		intrinsic_rise_max : 6.087817  ;
+		rise_transition : 0.062987  ;
+		intrinsic_fall_min : 5.610212  ;
+		intrinsic_fall_max : 5.626431  ;
+		fall_transition : 0.074079  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[29]") {
+	direction : output ;
+	capacitance : 0.066814 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 5.842971  ;
+		intrinsic_fall_max : 5.859441  ;
+		fall_transition : 0.074798  ;
+		intrinsic_rise_min : 6.004208  ;
+		intrinsic_rise_max : 6.017904  ;
+		rise_transition : 0.063664  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.553266  ;
+		intrinsic_fall_max : 6.569736  ;
+		fall_transition : 0.074798  ;
+		intrinsic_rise_min : 6.746244  ;
+		intrinsic_rise_max : 6.759940  ;
+		rise_transition : 0.063664  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.275819  ;
+		intrinsic_rise_max : 6.289515  ;
+		rise_transition : 0.063664  ;
+		intrinsic_fall_min : 5.898697  ;
+		intrinsic_fall_max : 5.915175  ;
+		fall_transition : 0.074798  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[28]") {
+	direction : output ;
+	capacitance : 0.066780 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 5.777286  ;
+		intrinsic_fall_max : 5.793334  ;
+		fall_transition : 0.074280  ;
+		intrinsic_rise_min : 5.923488  ;
+		intrinsic_rise_max : 5.937135  ;
+		rise_transition : 0.063211  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.487580  ;
+		intrinsic_fall_max : 6.503630  ;
+		fall_transition : 0.074280  ;
+		intrinsic_rise_min : 6.665524  ;
+		intrinsic_rise_max : 6.679171  ;
+		rise_transition : 0.063211  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.195099  ;
+		intrinsic_rise_max : 6.208745  ;
+		rise_transition : 0.063211  ;
+		intrinsic_fall_min : 5.833012  ;
+		intrinsic_fall_max : 5.849069  ;
+		fall_transition : 0.074280  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[27]") {
+	direction : output ;
+	capacitance : 0.068911 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 5.785436  ;
+		intrinsic_fall_max : 5.801209  ;
+		fall_transition : 0.075552  ;
+		intrinsic_rise_min : 6.051502  ;
+		intrinsic_rise_max : 6.064997  ;
+		rise_transition : 0.064563  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.495731  ;
+		intrinsic_fall_max : 6.511504  ;
+		fall_transition : 0.075552  ;
+		intrinsic_rise_min : 6.793537  ;
+		intrinsic_rise_max : 6.807033  ;
+		rise_transition : 0.064563  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.323112  ;
+		intrinsic_rise_max : 6.336607  ;
+		rise_transition : 0.064563  ;
+		intrinsic_fall_min : 5.841163  ;
+		intrinsic_fall_max : 5.856944  ;
+		fall_transition : 0.075552  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[26]") {
+	direction : output ;
+	capacitance : 0.069622 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 5.567632  ;
+		intrinsic_fall_max : 5.583392  ;
+		fall_transition : 0.076114  ;
+		intrinsic_rise_min : 6.049601  ;
+		intrinsic_rise_max : 6.063184  ;
+		rise_transition : 0.065714  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.277926  ;
+		intrinsic_fall_max : 6.293686  ;
+		fall_transition : 0.076114  ;
+		intrinsic_rise_min : 6.791637  ;
+		intrinsic_rise_max : 6.805220  ;
+		rise_transition : 0.065714  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.321212  ;
+		intrinsic_rise_max : 6.334795  ;
+		rise_transition : 0.065714  ;
+		intrinsic_fall_min : 5.623358  ;
+		intrinsic_fall_max : 5.639126  ;
+		fall_transition : 0.076114  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[25]") {
+	direction : output ;
+	capacitance : 0.067436 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 5.802707  ;
+		intrinsic_fall_max : 5.818836  ;
+		fall_transition : 0.075111  ;
+		intrinsic_rise_min : 5.992252  ;
+		intrinsic_rise_max : 6.005967  ;
+		rise_transition : 0.063861  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.513000  ;
+		intrinsic_fall_max : 6.529131  ;
+		fall_transition : 0.075111  ;
+		intrinsic_rise_min : 6.734288  ;
+		intrinsic_rise_max : 6.748003  ;
+		rise_transition : 0.063861  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.263864  ;
+		intrinsic_rise_max : 6.277578  ;
+		rise_transition : 0.063861  ;
+		intrinsic_fall_min : 5.858433  ;
+		intrinsic_fall_max : 5.874571  ;
+		fall_transition : 0.075111  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[24]") {
+	direction : output ;
+	capacitance : 0.066700 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.293765  ;
+		intrinsic_fall_max : 6.323336  ;
+		fall_transition : 0.073761  ;
+		intrinsic_rise_min : 6.436312  ;
+		intrinsic_rise_max : 6.461043  ;
+		rise_transition : 0.062982  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 7.004060  ;
+		intrinsic_fall_max : 7.033631  ;
+		fall_transition : 0.073761  ;
+		intrinsic_rise_min : 7.178348  ;
+		intrinsic_rise_max : 7.203078  ;
+		rise_transition : 0.062982  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.707923  ;
+		intrinsic_rise_max : 6.732654  ;
+		rise_transition : 0.062982  ;
+		intrinsic_fall_min : 6.349493  ;
+		intrinsic_fall_max : 6.379073  ;
+		fall_transition : 0.073761  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[23]") {
+	direction : output ;
+	capacitance : 0.067508 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.378818  ;
+		intrinsic_fall_max : 6.408282  ;
+		fall_transition : 0.074790  ;
+		intrinsic_rise_min : 6.397192  ;
+		intrinsic_rise_max : 6.421618  ;
+		rise_transition : 0.063741  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 7.089113  ;
+		intrinsic_fall_max : 7.118578  ;
+		fall_transition : 0.074790  ;
+		intrinsic_rise_min : 7.139228  ;
+		intrinsic_rise_max : 7.163654  ;
+		rise_transition : 0.063741  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.668803  ;
+		intrinsic_rise_max : 6.693230  ;
+		rise_transition : 0.063741  ;
+		intrinsic_fall_min : 6.434546  ;
+		intrinsic_fall_max : 6.464020  ;
+		fall_transition : 0.074790  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[22]") {
+	direction : output ;
+	capacitance : 0.070425 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.403163  ;
+		intrinsic_fall_max : 6.433020  ;
+		fall_transition : 0.077236  ;
+		intrinsic_rise_min : 6.355635  ;
+		intrinsic_rise_max : 6.379751  ;
+		rise_transition : 0.065934  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 7.113458  ;
+		intrinsic_fall_max : 7.143314  ;
+		fall_transition : 0.077236  ;
+		intrinsic_rise_min : 7.097671  ;
+		intrinsic_rise_max : 7.121787  ;
+		rise_transition : 0.065934  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.627246  ;
+		intrinsic_rise_max : 6.651362  ;
+		rise_transition : 0.065934  ;
+		intrinsic_fall_min : 6.458891  ;
+		intrinsic_fall_max : 6.488757  ;
+		fall_transition : 0.077236  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[21]") {
+	direction : output ;
+	capacitance : 0.067867 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.469753  ;
+		intrinsic_fall_max : 6.501059  ;
+		fall_transition : 0.074760  ;
+		intrinsic_rise_min : 6.714081  ;
+		intrinsic_rise_max : 6.738875  ;
+		rise_transition : 0.063787  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 7.180048  ;
+		intrinsic_fall_max : 7.211354  ;
+		fall_transition : 0.074760  ;
+		intrinsic_rise_min : 7.456117  ;
+		intrinsic_rise_max : 7.480911  ;
+		rise_transition : 0.063787  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.985692  ;
+		intrinsic_rise_max : 7.010486  ;
+		rise_transition : 0.063787  ;
+		intrinsic_fall_min : 6.525481  ;
+		intrinsic_fall_max : 6.556796  ;
+		fall_transition : 0.074760  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[20]") {
+	direction : output ;
+	capacitance : 0.066900 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 5.913228  ;
+		intrinsic_fall_max : 5.943069  ;
+		fall_transition : 0.074738  ;
+		intrinsic_rise_min : 6.078943  ;
+		intrinsic_rise_max : 6.102938  ;
+		rise_transition : 0.063536  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.623523  ;
+		intrinsic_fall_max : 6.653365  ;
+		fall_transition : 0.074738  ;
+		intrinsic_rise_min : 6.820979  ;
+		intrinsic_rise_max : 6.844973  ;
+		rise_transition : 0.063536  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.350554  ;
+		intrinsic_rise_max : 6.374548  ;
+		rise_transition : 0.063536  ;
+		intrinsic_fall_min : 5.968956  ;
+		intrinsic_fall_max : 5.998807  ;
+		fall_transition : 0.074738  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[19]") {
+	direction : output ;
+	capacitance : 0.067015 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.354281  ;
+		intrinsic_fall_max : 6.385870  ;
+		fall_transition : 0.075466  ;
+		intrinsic_rise_min : 6.598127  ;
+		intrinsic_rise_max : 6.622245  ;
+		rise_transition : 0.065022  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 7.064577  ;
+		intrinsic_fall_max : 7.096167  ;
+		fall_transition : 0.075466  ;
+		intrinsic_rise_min : 7.340163  ;
+		intrinsic_rise_max : 7.364281  ;
+		rise_transition : 0.065022  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.869738  ;
+		intrinsic_rise_max : 6.893856  ;
+		rise_transition : 0.065022  ;
+		intrinsic_fall_min : 6.410009  ;
+		intrinsic_fall_max : 6.441608  ;
+		fall_transition : 0.075466  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[18]") {
+	direction : output ;
+	capacitance : 0.069639 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.214099  ;
+		intrinsic_fall_max : 6.244571  ;
+		fall_transition : 0.076415  ;
+		intrinsic_rise_min : 6.090350  ;
+		intrinsic_rise_max : 6.115713  ;
+		rise_transition : 0.065196  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.924394  ;
+		intrinsic_fall_max : 6.954867  ;
+		fall_transition : 0.076415  ;
+		intrinsic_rise_min : 6.832386  ;
+		intrinsic_rise_max : 6.857748  ;
+		rise_transition : 0.065196  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.361960  ;
+		intrinsic_rise_max : 6.387323  ;
+		rise_transition : 0.065196  ;
+		intrinsic_fall_min : 6.269827  ;
+		intrinsic_fall_max : 6.300309  ;
+		fall_transition : 0.076415  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[17]") {
+	direction : output ;
+	capacitance : 0.067200 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 5.774055  ;
+		intrinsic_fall_max : 5.804084  ;
+		fall_transition : 0.074777  ;
+		intrinsic_rise_min : 6.162256  ;
+		intrinsic_rise_max : 6.186273  ;
+		rise_transition : 0.063541  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.484349  ;
+		intrinsic_fall_max : 6.514379  ;
+		fall_transition : 0.074777  ;
+		intrinsic_rise_min : 6.904293  ;
+		intrinsic_rise_max : 6.928308  ;
+		rise_transition : 0.063541  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.433868  ;
+		intrinsic_rise_max : 6.457884  ;
+		rise_transition : 0.063541  ;
+		intrinsic_fall_min : 5.829783  ;
+		intrinsic_fall_max : 5.859821  ;
+		fall_transition : 0.074777  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[16]") {
+	direction : output ;
+	capacitance : 0.067507 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 5.945621  ;
+		intrinsic_fall_max : 5.976365  ;
+		fall_transition : 0.075125  ;
+		intrinsic_rise_min : 6.177616  ;
+		intrinsic_rise_max : 6.201716  ;
+		rise_transition : 0.063871  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.655916  ;
+		intrinsic_fall_max : 6.686661  ;
+		fall_transition : 0.075125  ;
+		intrinsic_rise_min : 6.919652  ;
+		intrinsic_rise_max : 6.943751  ;
+		rise_transition : 0.063871  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.449227  ;
+		intrinsic_rise_max : 6.473327  ;
+		rise_transition : 0.063871  ;
+		intrinsic_fall_min : 6.001349  ;
+		intrinsic_fall_max : 6.032103  ;
+		fall_transition : 0.075125  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[15]") {
+	direction : output ;
+	capacitance : 0.066849 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.337387  ;
+		intrinsic_fall_max : 6.367225  ;
+		fall_transition : 0.073369  ;
+		intrinsic_rise_min : 6.594402  ;
+		intrinsic_rise_max : 6.618710  ;
+		rise_transition : 0.062972  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 7.047681  ;
+		intrinsic_fall_max : 7.077521  ;
+		fall_transition : 0.073369  ;
+		intrinsic_rise_min : 7.336438  ;
+		intrinsic_rise_max : 7.360745  ;
+		rise_transition : 0.062972  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.866013  ;
+		intrinsic_rise_max : 6.890321  ;
+		rise_transition : 0.062972  ;
+		intrinsic_fall_min : 6.393115  ;
+		intrinsic_fall_max : 6.422963  ;
+		fall_transition : 0.073369  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[14]") {
+	direction : output ;
+	capacitance : 0.069125 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 5.952829  ;
+		intrinsic_fall_max : 5.983693  ;
+		fall_transition : 0.076108  ;
+		intrinsic_rise_min : 6.095506  ;
+		intrinsic_rise_max : 6.119925  ;
+		rise_transition : 0.064928  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.663125  ;
+		intrinsic_fall_max : 6.693987  ;
+		fall_transition : 0.076108  ;
+		intrinsic_rise_min : 6.837541  ;
+		intrinsic_rise_max : 6.861960  ;
+		rise_transition : 0.064928  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.367116  ;
+		intrinsic_rise_max : 6.391535  ;
+		rise_transition : 0.064928  ;
+		intrinsic_fall_min : 6.008558  ;
+		intrinsic_fall_max : 6.039429  ;
+		fall_transition : 0.076108  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[13]") {
+	direction : output ;
+	capacitance : 0.068162 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.090743  ;
+		intrinsic_fall_max : 6.120695  ;
+		fall_transition : 0.075485  ;
+		intrinsic_rise_min : 6.221012  ;
+		intrinsic_rise_max : 6.244866  ;
+		rise_transition : 0.064198  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.801038  ;
+		intrinsic_fall_max : 6.830991  ;
+		fall_transition : 0.075485  ;
+		intrinsic_rise_min : 6.963048  ;
+		intrinsic_rise_max : 6.986903  ;
+		rise_transition : 0.064198  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.492623  ;
+		intrinsic_rise_max : 6.516478  ;
+		rise_transition : 0.064198  ;
+		intrinsic_fall_min : 6.146472  ;
+		intrinsic_fall_max : 6.176433  ;
+		fall_transition : 0.075485  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[12]") {
+	direction : output ;
+	capacitance : 0.069027 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.522741  ;
+		intrinsic_fall_max : 6.552967  ;
+		fall_transition : 0.076007  ;
+		intrinsic_rise_min : 6.722745  ;
+		intrinsic_rise_max : 6.747689  ;
+		rise_transition : 0.064833  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 7.233036  ;
+		intrinsic_fall_max : 7.263262  ;
+		fall_transition : 0.076007  ;
+		intrinsic_rise_min : 7.464781  ;
+		intrinsic_rise_max : 7.489725  ;
+		rise_transition : 0.064833  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.994356  ;
+		intrinsic_rise_max : 7.019300  ;
+		rise_transition : 0.064833  ;
+		intrinsic_fall_min : 6.578469  ;
+		intrinsic_fall_max : 6.608704  ;
+		fall_transition : 0.076007  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[11]") {
+	direction : output ;
+	capacitance : 0.066702 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.261230  ;
+		intrinsic_fall_max : 6.291384  ;
+		fall_transition : 0.074208  ;
+		intrinsic_rise_min : 6.363419  ;
+		intrinsic_rise_max : 6.388643  ;
+		rise_transition : 0.063285  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.971525  ;
+		intrinsic_fall_max : 7.001680  ;
+		fall_transition : 0.074208  ;
+		intrinsic_rise_min : 7.105455  ;
+		intrinsic_rise_max : 7.130679  ;
+		rise_transition : 0.063285  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.635030  ;
+		intrinsic_rise_max : 6.660254  ;
+		rise_transition : 0.063285  ;
+		intrinsic_fall_min : 6.316958  ;
+		intrinsic_fall_max : 6.347122  ;
+		fall_transition : 0.074208  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[10]") {
+	direction : output ;
+	capacitance : 0.071121 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.352405  ;
+		intrinsic_fall_max : 6.382687  ;
+		fall_transition : 0.077915  ;
+		intrinsic_rise_min : 6.423431  ;
+		intrinsic_rise_max : 6.449399  ;
+		rise_transition : 0.066456  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 7.062700  ;
+		intrinsic_fall_max : 7.092982  ;
+		fall_transition : 0.077915  ;
+		intrinsic_rise_min : 7.165467  ;
+		intrinsic_rise_max : 7.191435  ;
+		rise_transition : 0.066456  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.695043  ;
+		intrinsic_rise_max : 6.721011  ;
+		rise_transition : 0.066456  ;
+		intrinsic_fall_min : 6.408134  ;
+		intrinsic_fall_max : 6.438424  ;
+		fall_transition : 0.077915  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[9]") {
+	direction : output ;
+	capacitance : 0.066742 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.262665  ;
+		intrinsic_fall_max : 6.294880  ;
+		fall_transition : 0.074476  ;
+		intrinsic_rise_min : 6.708426  ;
+		intrinsic_rise_max : 6.733263  ;
+		rise_transition : 0.063310  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.972960  ;
+		intrinsic_fall_max : 7.005175  ;
+		fall_transition : 0.074476  ;
+		intrinsic_rise_min : 7.450462  ;
+		intrinsic_rise_max : 7.475298  ;
+		rise_transition : 0.063310  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.980038  ;
+		intrinsic_rise_max : 7.004873  ;
+		rise_transition : 0.063310  ;
+		intrinsic_fall_min : 6.318393  ;
+		intrinsic_fall_max : 6.350617  ;
+		fall_transition : 0.074476  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[8]") {
+	direction : output ;
+	capacitance : 0.067278 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.465530  ;
+		intrinsic_fall_max : 6.498395  ;
+		fall_transition : 0.074975  ;
+		intrinsic_rise_min : 6.617603  ;
+		intrinsic_rise_max : 6.643409  ;
+		rise_transition : 0.063743  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 7.175825  ;
+		intrinsic_fall_max : 7.208691  ;
+		fall_transition : 0.074975  ;
+		intrinsic_rise_min : 7.359638  ;
+		intrinsic_rise_max : 7.385444  ;
+		rise_transition : 0.063743  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.889213  ;
+		intrinsic_rise_max : 6.915020  ;
+		rise_transition : 0.063743  ;
+		intrinsic_fall_min : 6.521259  ;
+		intrinsic_fall_max : 6.554133  ;
+		fall_transition : 0.074975  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[7]") {
+	direction : output ;
+	capacitance : 0.068855 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.102009  ;
+		intrinsic_fall_max : 6.132446  ;
+		fall_transition : 0.076039  ;
+		intrinsic_rise_min : 6.100432  ;
+		intrinsic_rise_max : 6.124893  ;
+		rise_transition : 0.064670  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.812304  ;
+		intrinsic_fall_max : 6.842742  ;
+		fall_transition : 0.076039  ;
+		intrinsic_rise_min : 6.842469  ;
+		intrinsic_rise_max : 6.866929  ;
+		rise_transition : 0.064670  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.372043  ;
+		intrinsic_rise_max : 6.396504  ;
+		rise_transition : 0.064670  ;
+		intrinsic_fall_min : 6.157737  ;
+		intrinsic_fall_max : 6.188184  ;
+		fall_transition : 0.076039  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[6]") {
+	direction : output ;
+	capacitance : 0.066783 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.390969  ;
+		intrinsic_fall_max : 6.421198  ;
+		fall_transition : 0.074001  ;
+		intrinsic_rise_min : 6.820282  ;
+		intrinsic_rise_max : 6.845528  ;
+		rise_transition : 0.063739  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 7.101265  ;
+		intrinsic_fall_max : 7.131494  ;
+		fall_transition : 0.074001  ;
+		intrinsic_rise_min : 7.562318  ;
+		intrinsic_rise_max : 7.587564  ;
+		rise_transition : 0.063739  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 7.091893  ;
+		intrinsic_rise_max : 7.117139  ;
+		rise_transition : 0.063739  ;
+		intrinsic_fall_min : 6.446698  ;
+		intrinsic_fall_max : 6.476935  ;
+		fall_transition : 0.074001  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[5]") {
+	direction : output ;
+	capacitance : 0.068940 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.089647  ;
+		intrinsic_fall_max : 6.121384  ;
+		fall_transition : 0.075009  ;
+		intrinsic_rise_min : 6.469993  ;
+		intrinsic_rise_max : 6.494692  ;
+		rise_transition : 0.064421  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.799943  ;
+		intrinsic_fall_max : 6.831680  ;
+		fall_transition : 0.075009  ;
+		intrinsic_rise_min : 7.212029  ;
+		intrinsic_rise_max : 7.236728  ;
+		rise_transition : 0.064421  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.741604  ;
+		intrinsic_rise_max : 6.766303  ;
+		rise_transition : 0.064421  ;
+		intrinsic_fall_min : 6.145375  ;
+		intrinsic_fall_max : 6.177121  ;
+		fall_transition : 0.075009  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[4]") {
+	direction : output ;
+	capacitance : 0.066770 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.625726  ;
+		intrinsic_fall_max : 6.655839  ;
+		fall_transition : 0.073509  ;
+		intrinsic_rise_min : 6.879621  ;
+		intrinsic_rise_max : 6.903860  ;
+		rise_transition : 0.063028  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 7.336020  ;
+		intrinsic_fall_max : 7.366134  ;
+		fall_transition : 0.073509  ;
+		intrinsic_rise_min : 7.621657  ;
+		intrinsic_rise_max : 7.645895  ;
+		rise_transition : 0.063028  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 7.151232  ;
+		intrinsic_rise_max : 7.175471  ;
+		rise_transition : 0.063028  ;
+		intrinsic_fall_min : 6.681453  ;
+		intrinsic_fall_max : 6.711576  ;
+		fall_transition : 0.073509  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[3]") {
+	direction : output ;
+	capacitance : 0.067086 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.798477  ;
+		intrinsic_fall_max : 6.828840  ;
+		fall_transition : 0.074558  ;
+		intrinsic_rise_min : 6.676198  ;
+		intrinsic_rise_max : 6.700355  ;
+		rise_transition : 0.063352  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 7.508773  ;
+		intrinsic_fall_max : 7.539136  ;
+		fall_transition : 0.074558  ;
+		intrinsic_rise_min : 7.418234  ;
+		intrinsic_rise_max : 7.442391  ;
+		rise_transition : 0.063352  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.947809  ;
+		intrinsic_rise_max : 6.971966  ;
+		rise_transition : 0.063352  ;
+		intrinsic_fall_min : 6.854206  ;
+		intrinsic_fall_max : 6.884577  ;
+		fall_transition : 0.074558  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[2]") {
+	direction : output ;
+	capacitance : 0.067639 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.517885  ;
+		intrinsic_fall_max : 6.548809  ;
+		fall_transition : 0.073989  ;
+		intrinsic_rise_min : 6.583485  ;
+		intrinsic_rise_max : 6.608551  ;
+		rise_transition : 0.063519  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 7.228179  ;
+		intrinsic_fall_max : 7.259104  ;
+		fall_transition : 0.073989  ;
+		intrinsic_rise_min : 7.325520  ;
+		intrinsic_rise_max : 7.350586  ;
+		rise_transition : 0.063519  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.855095  ;
+		intrinsic_rise_max : 6.880161  ;
+		rise_transition : 0.063519  ;
+		intrinsic_fall_min : 6.573613  ;
+		intrinsic_fall_max : 6.604546  ;
+		fall_transition : 0.073989  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[1]") {
+	direction : output ;
+	capacitance : 0.066445 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 5.991747  ;
+		intrinsic_fall_max : 6.022662  ;
+		fall_transition : 0.074240  ;
+		intrinsic_rise_min : 5.957674  ;
+		intrinsic_rise_max : 5.983013  ;
+		rise_transition : 0.063077  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.702043  ;
+		intrinsic_fall_max : 6.732957  ;
+		fall_transition : 0.074240  ;
+		intrinsic_rise_min : 6.699710  ;
+		intrinsic_rise_max : 6.725049  ;
+		rise_transition : 0.063077  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.229285  ;
+		intrinsic_rise_max : 6.254624  ;
+		rise_transition : 0.063077  ;
+		intrinsic_fall_min : 6.047476  ;
+		intrinsic_fall_max : 6.078399  ;
+		fall_transition : 0.074240  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_Prdata[0]") {
+	direction : output ;
+	capacitance : 0.067128 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.476030  ;
+		intrinsic_fall_max : 6.506081  ;
+		fall_transition : 0.073588  ;
+		intrinsic_rise_min : 6.350340  ;
+		intrinsic_rise_max : 6.374326  ;
+		rise_transition : 0.063165  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 7.186325  ;
+		intrinsic_fall_max : 7.216376  ;
+		fall_transition : 0.073588  ;
+		intrinsic_rise_min : 7.092376  ;
+		intrinsic_rise_max : 7.116362  ;
+		rise_transition : 0.063165  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.621952  ;
+		intrinsic_rise_max : 6.645937  ;
+		rise_transition : 0.063165  ;
+		intrinsic_fall_min : 6.531758  ;
+		intrinsic_fall_max : 6.561818  ;
+		fall_transition : 0.073588  ;
+
+	} 
+
+
+} 
+pin("SPIm_PReady") {
+	direction : output ;
+	capacitance : 0.068620 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 5.589176  ;
+		intrinsic_rise_max : 5.620484  ;
+		rise_transition : 0.064533  ;
+		intrinsic_fall_min : 5.519730  ;
+		intrinsic_fall_max : 5.554028  ;
+		fall_transition : 0.075881  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 5.519730  ;
+		intrinsic_fall_max : 5.554028  ;
+		fall_transition : 0.075881  ;
+		intrinsic_rise_min : 5.589176  ;
+		intrinsic_rise_max : 5.620484  ;
+		rise_transition : 0.064533  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 6.331213  ;
+		intrinsic_rise_max : 6.362519  ;
+		rise_transition : 0.064533  ;
+		intrinsic_fall_min : 6.230025  ;
+		intrinsic_fall_max : 6.264323  ;
+		fall_transition : 0.075881  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : negative_unate ;
+		intrinsic_fall_min : 6.230025  ;
+		intrinsic_fall_max : 6.264323  ;
+		fall_transition : 0.075881  ;
+		intrinsic_rise_min : 6.331213  ;
+		intrinsic_rise_max : 6.362519  ;
+		rise_transition : 0.064533  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 5.187427  ;
+		intrinsic_rise_max : 5.892094  ;
+		rise_transition : 0.064533  ;
+		intrinsic_fall_min : 5.096923  ;
+		intrinsic_fall_max : 5.611376  ;
+		fall_transition : 0.075881  ;
+
+	} 
+
+
+} 
+
+pin("SPIm_PSlvErr") {
+	direction : output ;
+	capacitance : 0.066595 ;
+	timing () {
+		related_pin : "SPIm_Paddr[10]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 5.237363  ;
+		intrinsic_rise_max : 5.237640  ;
+		rise_transition : 0.070345  ;
+		intrinsic_fall_min : 5.358724  ;
+		intrinsic_fall_max : 5.359144  ;
+		fall_transition : 0.077823  ;
+	} 
+
+
+	timing () {
+		related_pin : "SPIm_Paddr[11]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 5.936061  ;
+		intrinsic_rise_max : 5.936337  ;
+		rise_transition : 0.070345  ;
+		intrinsic_fall_min : 6.095010  ;
+		intrinsic_fall_max : 6.095431  ;
+		fall_transition : 0.077823  ;
+
+	} 
+
+
+	timing () {
+		related_pin : "Sys_PSel" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 5.304804  ;
+		intrinsic_rise_max : 5.344587  ;
+		rise_transition : 0.070345  ;
+		intrinsic_fall_min : 5.378037  ;
+		intrinsic_fall_max : 5.404816  ;
+		fall_transition : 0.077823  ;
+
+	} 
+
+
+} 
+pin("SDMA_Done[3]") {
+	direction : output ;
+	capacitance : 0.067032 ;
+} 
+
+pin("SDMA_Done[2]") {
+	direction : output ;
+	capacitance : 0.066368 ;
+} 
+
+pin("SDMA_Done[1]") {
+	direction : output ;
+	capacitance : 0.067409 ;
+} 
+
+pin("SDMA_Done[0]") {
+	direction : output ;
+	capacitance : 0.066278 ;
+} 
+pin("SDMA_Active[3]") {
+	direction : output ;
+	capacitance : 0.066828 ;
+} 
+
+pin("SDMA_Active[2]") {
+	direction : output ;
+	capacitance : 0.066835 ;
+} 
+
+pin("SDMA_Active[1]") {
+	direction : output ;
+	capacitance : 0.066646 ;
+} 
+
+pin("SDMA_Active[0]") {
+	direction : output ;
+	capacitance : 0.066401 ;
+} 
+pin("SDMA_Req[3]") {
+	direction : input ;
+	capacitance : 0.015174 ;
+} 
+
+pin("SDMA_Req[2]") {
+	direction : input ;
+	capacitance : 0.014863 ;
+} 
+
+pin("SDMA_Req[1]") {
+	direction : input ;
+	capacitance : 0.012887 ;
+} 
+
+pin("SDMA_Req[0]") {
+	direction : input ;
+	capacitance : 0.018057 ;
+} 
+pin("SDMA_Sreq[3]") {
+	direction : input ;
+	capacitance : 0.014827 ;
+} 
+
+pin("SDMA_Sreq[2]") {
+	direction : input ;
+	capacitance : 0.018698 ;
+} 
+
+pin("SDMA_Sreq[1]") {
+	direction : input ;
+	capacitance : 0.015738 ;
+} 
+
+pin("SDMA_Sreq[0]") {
+	direction : input ;
+	capacitance : 0.014713 ;
+} 
+pin("FBIO_In[13]") {
+	direction : output ;
+	capacitance : 0.068313 ;
+	timing () {
+		related_pin : "FBIO_In_En[13]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 16.067896  ;
+		intrinsic_rise_max : 16.137035  ;
+		rise_transition : 0.064091  ;
+		intrinsic_fall_min : 17.199528  ;
+		intrinsic_fall_max : 17.350603  ;
+		fall_transition : 0.075251  ;
+	} 
+
+
+} 
+
+pin("FBIO_In[12]") {
+	direction : output ;
+	capacitance : 0.068498 ;
+	timing () {
+		related_pin : "FBIO_In_En[12]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 14.901820  ;
+		intrinsic_rise_max : 15.010447  ;
+		rise_transition : 0.064229  ;
+		intrinsic_fall_min : 16.322664  ;
+		intrinsic_fall_max : 16.512144  ;
+		fall_transition : 0.075421  ;
+	} 
+
+
+} 
+
+pin("FBIO_In[11]") {
+	direction : output ;
+	capacitance : 0.066476 ;
+	timing () {
+		related_pin : "FBIO_In_En[11]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 16.213245  ;
+		intrinsic_rise_max : 16.260393  ;
+		rise_transition : 0.072754  ;
+		intrinsic_fall_min : 17.087074  ;
+		intrinsic_fall_max : 17.179813  ;
+		fall_transition : 0.078906  ;
+	} 
+
+
+} 
+
+pin("FBIO_In[10]") {
+	direction : output ;
+	capacitance : 0.066623 ;
+	timing () {
+		related_pin : "FBIO_In_En[10]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 16.002249  ;
+		intrinsic_rise_max : 16.047640  ;
+		rise_transition : 0.071944  ;
+		intrinsic_fall_min : 17.369001  ;
+		intrinsic_fall_max : 17.450592  ;
+		fall_transition : 0.078629  ;
+	} 
+
+
+} 
+
+pin("FBIO_In[9]") {
+	direction : output ;
+	capacitance : 0.066390 ;
+	timing () {
+		related_pin : "FBIO_In_En[9]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 17.340809  ;
+		intrinsic_rise_max : 17.389933  ;
+		rise_transition : 0.070357  ;
+		intrinsic_fall_min : 18.231169  ;
+		intrinsic_fall_max : 18.317915  ;
+		fall_transition : 0.077574  ;
+	} 
+
+
+} 
+
+pin("FBIO_In[8]") {
+	direction : output ;
+	capacitance : 0.066590 ;
+	timing () {
+		related_pin : "FBIO_In_En[8]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 16.615620  ;
+		intrinsic_rise_max : 16.660118  ;
+		rise_transition : 0.071492  ;
+		intrinsic_fall_min : 17.695543  ;
+		intrinsic_fall_max : 17.778051  ;
+		fall_transition : 0.077943  ;
+	} 
+
+
+} 
+
+pin("FBIO_In[7]") {
+	direction : output ;
+	capacitance : 0.066708 ;
+	timing () {
+		related_pin : "FBIO_In_En[7]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 15.391842  ;
+		intrinsic_rise_max : 15.437223  ;
+		rise_transition : 0.072551  ;
+		intrinsic_fall_min : 16.037722  ;
+		intrinsic_fall_max : 16.120146  ;
+		fall_transition : 0.078404  ;
+	} 
+
+
+} 
+
+pin("FBIO_In[6]") {
+	direction : output ;
+	capacitance : 0.066574 ;
+} 
+
+pin("FBIO_In[5]") {
+	direction : output ;
+	capacitance : 0.066616 ;
+	timing () {
+		related_pin : "FBIO_In_En[5]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 14.702873  ;
+		intrinsic_rise_max : 14.750834  ;
+		rise_transition : 0.071474  ;
+		intrinsic_fall_min : 16.107960  ;
+		intrinsic_fall_max : 16.196156  ;
+		fall_transition : 0.078256  ;
+	} 
+
+
+} 
+
+pin("FBIO_In[4]") {
+	direction : output ;
+	capacitance : 0.066739 ;
+	timing () {
+		related_pin : "FBIO_In_En[4]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 14.113743  ;
+		intrinsic_rise_max : 14.300876  ;
+		rise_transition : 0.064528  ;
+		intrinsic_fall_min : 15.209447  ;
+		intrinsic_fall_max : 15.449408  ;
+		fall_transition : 0.074975  ;
+	} 
+
+
+} 
+
+pin("FBIO_In[3]") {
+	direction : output ;
+	capacitance : 0.066741 ;
+	timing () {
+		related_pin : "FBIO_In_En[3]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 16.524204  ;
+		intrinsic_rise_max : 16.571009  ;
+		rise_transition : 0.073085  ;
+		intrinsic_fall_min : 18.149284  ;
+		intrinsic_fall_max : 18.235777  ;
+		fall_transition : 0.080415  ;
+	} 
+
+
+} 
+
+pin("FBIO_In[2]") {
+	direction : output ;
+	capacitance : 0.066338 ;
+	timing () {
+		related_pin : "FBIO_In_En[2]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 16.056293  ;
+		intrinsic_rise_max : 16.106215  ;
+		rise_transition : 0.072555  ;
+		intrinsic_fall_min : 16.626774  ;
+		intrinsic_fall_max : 16.706354  ;
+		fall_transition : 0.078803  ;
+	} 
+
+
+} 
+
+pin("FBIO_In[1]") {
+	direction : output ;
+	capacitance : 0.066601 ;
+	timing () {
+		related_pin : "FBIO_In_En[1]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 15.966972  ;
+		intrinsic_rise_max : 16.013397  ;
+		rise_transition : 0.071249  ;
+		intrinsic_fall_min : 16.816525  ;
+		intrinsic_fall_max : 16.897564  ;
+		fall_transition : 0.077742  ;
+	} 
+
+
+} 
+
+pin("FBIO_In[0]") {
+	direction : output ;
+	capacitance : 0.067325 ;
+	timing () {
+		related_pin : "FBIO_In_En[0]" ;
+		timing_type : combinational ;
+		timing_sense : positive_unate ;
+		intrinsic_rise_min : 18.755428  ;
+		intrinsic_rise_max : 18.800743  ;
+		rise_transition : 0.071959  ;
+		intrinsic_fall_min : 18.694845  ;
+		intrinsic_fall_max : 18.791489  ;
+		fall_transition : 0.078622  ;
+	} 
+
+
+} 
+pin("FBIO_In_En[13]") {
+	direction : input ;
+	capacitance : 0.007642 ;
+} 
+
+pin("FBIO_In_En[12]") {
+	direction : input ;
+	capacitance : 0.023306 ;
+} 
+
+pin("FBIO_In_En[11]") {
+	direction : input ;
+	capacitance : 0.007337 ;
+} 
+
+pin("FBIO_In_En[10]") {
+	direction : input ;
+	capacitance : 0.019875 ;
+} 
+
+pin("FBIO_In_En[9]") {
+	direction : input ;
+	capacitance : 0.007436 ;
+} 
+
+pin("FBIO_In_En[8]") {
+	direction : input ;
+	capacitance : 0.005586 ;
+} 
+
+pin("FBIO_In_En[7]") {
+	direction : input ;
+	capacitance : 0.019610 ;
+} 
+
+pin("FBIO_In_En[6]") {
+	direction : input ;
+	capacitance : 0.004934 ;
+} 
+
+pin("FBIO_In_En[5]") {
+	direction : input ;
+	capacitance : 0.019312 ;
+} 
+
+pin("FBIO_In_En[4]") {
+	direction : input ;
+	capacitance : 0.004162 ;
+} 
+
+pin("FBIO_In_En[3]") {
+	direction : input ;
+	capacitance : 0.003362 ;
+} 
+
+pin("FBIO_In_En[2]") {
+	direction : input ;
+	capacitance : 0.015505 ;
+} 
+
+pin("FBIO_In_En[1]") {
+	direction : input ;
+	capacitance : 0.019985 ;
+} 
+
+pin("FBIO_In_En[0]") {
+	direction : input ;
+	capacitance : 0.006273 ;
+} 
+pin("FBIO_Out[13]") {
+	direction : input ;
+	capacitance : 0.017035 ;
+} 
+
+pin("FBIO_Out[12]") {
+	direction : input ;
+	capacitance : 0.004334 ;
+} 
+
+pin("FBIO_Out[11]") {
+	direction : input ;
+	capacitance : 0.007274 ;
+} 
+
+pin("FBIO_Out[10]") {
+	direction : input ;
+	capacitance : 0.016930 ;
+} 
+
+pin("FBIO_Out[9]") {
+	direction : input ;
+	capacitance : 0.019139 ;
+} 
+
+pin("FBIO_Out[8]") {
+	direction : input ;
+	capacitance : 0.010636 ;
+} 
+
+pin("FBIO_Out[7]") {
+	direction : input ;
+	capacitance : 0.014550 ;
+} 
+
+pin("FBIO_Out[6]") {
+	direction : input ;
+	capacitance : 0.014644 ;
+} 
+
+pin("FBIO_Out[5]") {
+	direction : input ;
+	capacitance : 0.019814 ;
+} 
+
+pin("FBIO_Out[4]") {
+	direction : input ;
+	capacitance : 0.013710 ;
+} 
+
+pin("FBIO_Out[3]") {
+	direction : input ;
+	capacitance : 0.016046 ;
+} 
+
+pin("FBIO_Out[2]") {
+	direction : input ;
+	capacitance : 0.005784 ;
+} 
+
+pin("FBIO_Out[1]") {
+	direction : input ;
+	capacitance : 0.015833 ;
+} 
+
+pin("FBIO_Out[0]") {
+	direction : input ;
+	capacitance : 0.015833 ;
+} 
+pin("FBIO_Out_En[13]") {
+	direction : input ;
+	capacitance : 0.012160 ;
+} 
+
+pin("FBIO_Out_En[12]") {
+	direction : input ;
+	capacitance : 0.004650 ;
+} 
+
+pin("FBIO_Out_En[11]") {
+	direction : input ;
+	capacitance : 0.007097 ;
+} 
+
+pin("FBIO_Out_En[10]") {
+	direction : input ;
+	capacitance : 0.018957 ;
+} 
+
+pin("FBIO_Out_En[9]") {
+	direction : input ;
+	capacitance : 0.019043 ;
+} 
+
+pin("FBIO_Out_En[8]") {
+	direction : input ;
+	capacitance : 0.015377 ;
+} 
+
+pin("FBIO_Out_En[7]") {
+	direction : input ;
+	capacitance : 0.006668 ;
+} 
+
+pin("FBIO_Out_En[6]") {
+	direction : input ;
+	capacitance : 0.004403 ;
+} 
+
+pin("FBIO_Out_En[5]") {
+	direction : input ;
+	capacitance : 0.008690 ;
+} 
+
+pin("FBIO_Out_En[4]") {
+	direction : input ;
+	capacitance : 0.021716 ;
+} 
+
+pin("FBIO_Out_En[3]") {
+	direction : input ;
+	capacitance : 0.018424 ;
+} 
+
+pin("FBIO_Out_En[2]") {
+	direction : input ;
+	capacitance : 0.006626 ;
+} 
+
+pin("FBIO_Out_En[1]") {
+	direction : input ;
+	capacitance : 0.010869 ;
+} 
+
+pin("FBIO_Out_En[0]") {
+	direction : input ;
+	capacitance : 0.019730 ;
+} 
+pin("Device_ID[15]") {
+	direction : input ;
+	capacitance : 0.183666 ;
+} 
+
+pin("Device_ID[14]") {
+	direction : input ;
+	capacitance : 0.185359 ;
+} 
+
+pin("Device_ID[13]") {
+	direction : input ;
+	capacitance : 0.197261 ;
+} 
+
+pin("Device_ID[12]") {
+	direction : input ;
+	capacitance : 0.163115 ;
+} 
+
+pin("Device_ID[11]") {
+	direction : input ;
+	capacitance : 0.174756 ;
+} 
+
+pin("Device_ID[10]") {
+	direction : input ;
+	capacitance : 0.194088 ;
+} 
+
+pin("Device_ID[9]") {
+	direction : input ;
+	capacitance : 0.187862 ;
+} 
+
+pin("Device_ID[8]") {
+	direction : input ;
+	capacitance : 0.172120 ;
+} 
+
+pin("Device_ID[7]") {
+	direction : input ;
+	capacitance : 0.164066 ;
+} 
+
+pin("Device_ID[6]") {
+	direction : input ;
+	capacitance : 0.173856 ;
+} 
+
+pin("Device_ID[5]") {
+	direction : input ;
+	capacitance : 0.163143 ;
+} 
+
+pin("Device_ID[4]") {
+	direction : input ;
+	capacitance : 0.181439 ;
+} 
+
+pin("Device_ID[3]") {
+	direction : input ;
+	capacitance : 0.161044 ;
+} 
+
+pin("Device_ID[2]") {
+	direction : input ;
+	capacitance : 0.156372 ;
+} 
+
+pin("Device_ID[1]") {
+	direction : input ;
+	capacitance : 0.167525 ;
+} 
+
+pin("Device_ID[0]") {
+	direction : input ;
+	capacitance : 0.196627 ;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

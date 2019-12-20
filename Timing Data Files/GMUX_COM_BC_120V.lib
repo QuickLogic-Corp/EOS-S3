@@ -1,0 +1,65 @@
+GMUX cell POLARPRO_III kfactor 1.0
+
+PORT DELAY {
+
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IC ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IS0 ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IS1 ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			rise_transition : 0.9579010 ;
+			fall_transition : 0.9637000 ;
+			intrinsic_fall : 0.309 ;
+			intrinsic_rise : 0.302 ;
+		}
+		timing() {
+			related_pin : "IS0";
+			timing_sense : non_unate ;
+			rise_transition : 0.0916080 ;
+			fall_transition : 0.0941830 ;
+			intrinsic_fall : 0.7860680 ;
+			intrinsic_rise : 0.7464390 ;
+		}
+		timing() {
+			related_pin : "IS1";
+			timing_sense : non_unate ;
+			rise_transition : 0.0711750 ;
+			fall_transition : 0.0951085 ;
+			intrinsic_fall : 0.9890800 ;
+			intrinsic_rise : 1.0021300 ;
+		}
+		timing() {
+			related_pin : "IC";
+			timing_sense : positive_unate ;
+			rise_transition : 0.1454640 ;
+			fall_transition : 0.1459170 ;
+			intrinsic_fall : 0.265 ;
+			intrinsic_rise : 0.268 ;
+		}
+	}
+
+
+
+}
+

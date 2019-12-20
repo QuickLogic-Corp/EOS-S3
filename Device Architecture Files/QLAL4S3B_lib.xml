@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceLibrary FamilyName="QLAL4S3B">
+  <Library>
+    <inv mcell="LOGIC">
+      <input libport="A" port0="FS" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F2" port11="QCK" port12="QDI" port13="QEN" port14="QRT" port15="QST" port16="TA1" port17="TA2" port18="TAB" port19="TAS1" port20="TAS2" port21="TB1" port22="TB2" port23="TBS1" port24="TBS2" port25="TSL" />
+      <inputVCC pwrport="VCC" port0="F1" port1="QCKS" port2="QDS" port3="TBS" />
+      <output libport="Q" port0="FZ" />
+    </inv>
+    <buff mcell="LOGIC">
+      <input libport="A" port0="F1" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F2" port11="FS" port12="QCK" port13="QDI" port14="QEN" port15="QRT" port16="QST" port17="TA1" port18="TA2" port19="TAB" port20="TAS1" port21="TAS2" port22="TB1" port23="TB2" port24="TBS1" port25="TBS2" port26="TSL" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="TBS" />
+      <output libport="Q" port0="FZ" />
+    </buff>
+    <SERDESXIN mcell="ESPXXIN">
+      <input libport="SERDESXININ" port0="IZ" />
+      <output libport="SERDESXINOUT" port0="IP" />
+    </SERDESXIN>
+    <SERDESXOUT mcell="ESPXXOUT">
+      <input libport="SERDESXOUTIN" port0="IP" />
+      <output libport="SERDESXOUTOUT" port0="I1" />
+    </SERDESXOUT>
+    <logic_1 mcell="VCC">
+      <output libport="a" port0="VCC" />
+    </logic_1>
+    <logic_0 mcell="GND">
+      <output libport="a" port0="GND" />
+    </logic_0>
+    <mux2x0 mcell="LOGIC">
+      <input libport="S" port0="FS" />
+      <input libport="A" port0="F1" />
+      <input libport="B" port0="F2" />
+      <output libport="Q" port0="FZ" />
+    </mux2x0>
+	<AND2I0 mcell="LOGIC">
+      <input libport="A" port0="FS" />     
+      <input libport="B" port0="F2" />
+	  <inputGND pwrport="GND" port0="F1" />
+      <output libport="Q" port0="FZ" />
+    </AND2I0>
+    <mux2x1 mcell="LOGIC">
+      <input libport="S" port0="TSL" />
+      <input libport="A" port0="TA1" />
+      <input libport="B" port0="TA2" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F1" port11="F2" port12="FS" port13="QCK" port14="QDI" port15="QEN" port16="QRT" port17="QST"  port18="TAS2" port19="TBS1" port20="TBS2" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="TBS" port3="TAS1" />
+      <output libport="Q" port0="TZ" />
+    </mux2x1>
+    <mux4x0 mcell="LOGIC">
+      <input libport="S0" port0="TSL" />
+      <input libport="S1" port0="TAB" />
+      <input libport="A" port0="TA1" />
+      <input libport="B" port0="TA2" />
+      <input libport="C" port0="TB1" />
+      <input libport="D" port0="TB2" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F1" port11="F2" port12="FS" port13="QCK" port14="QDI" port15="QEN" port16="QRT" port17="QST" port18="TAS1" port19="TAS2" port20="TBS1" port21="TBS2" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="TBS" />
+      <output libport="Q" port0="TZ" />
+    </mux4x0>
+    <mux8x0 mcell="LOGIC">
+      <input libport="S0" port0="BSL" port1="TSL" />
+      <input libport="S1" port0="BAB" port1="TAB" />
+      <input libport="S2" port0="TBS" />
+      <input libport="A" port0="TA1" />
+      <input libport="B" port0="TA2" />
+      <input libport="C" port0="TB1" />
+      <input libport="D" port0="TB2" />
+      <input libport="E" port0="BA1" />
+      <input libport="F" port0="BA2" />
+      <input libport="G" port0="BB1" />
+      <input libport="H" port0="BB2" />
+      <inputGND pwrport="GND" port0="BAS1" port1="BAS2" port2="BBS1" port3="BBS2" port4="F1" port5="F2" port6="FS" port7="QCK" port8="QDI" port9="QEN" port10="QRT" port11="QST" port12="TAS1" port13="TAS2" port14="TBS1" port15="TBS2" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" />
+      <output libport="Q" port0="CZ" />
+    </mux8x0>
+    <logic_cell_macro mcell="LOGIC">
+      <input libport="BA1" port0="BA1" />
+      <input libport="BA2" port0="BA2" />
+      <input libport="BAB" port0="BAB" />
+      <input libport="BAS1" port0="BAS1" />
+      <input libport="BAS2" port0="BAS2" />
+      <input libport="BB1" port0="BB1" />
+      <input libport="BB2" port0="BB2" />
+      <input libport="BBS1" port0="BBS1" />
+      <input libport="BBS2" port0="BBS2" />
+      <input libport="BSL" port0="BSL" />
+      <input libport="F1" port0="F1" />
+      <input libport="F2" port0="F2" />
+      <input libport="FS" port0="FS" />
+      <input libport="QCK" port0="QCK" />
+      <input libport="QCKS" port0="QCKS" />
+      <input libport="QDI" port0="QDI" />
+      <input libport="QDS" port0="QDS" />
+      <input libport="QEN" port0="QEN" />
+      <input libport="QRT" port0="QRT" />
+      <input libport="QST" port0="QST" />
+      <input libport="TA1" port0="TA1" />
+      <input libport="TA2" port0="TA2" />
+      <input libport="TAB" port0="TAB" />
+      <output libport="TAS1" port0="TAS1" />
+      <output libport="TAS2" port0="TAS2" />
+      <output libport="TB1" port0="TB1" />
+      <output libport="TB2" port0="TB2" />
+      <output libport="TBS" port0="TBS" />
+      <output libport="TBS1" port0="TBS1" />
+      <output libport="TBS2" port0="TBS2" />
+      <output libport="TSL" port0="TSL" />
+      <output libport="TZ" port0="TZ" />
+      <output libport="CZ" port0="CZ" />
+      <output libport="FZ" port0="FZ" />
+      <output libport="QZ" port0="QZ" />
+    </logic_cell_macro>
+    <tfrag_macro mcell="LOGIC">
+      <input libport="TA1" port0="TA1" />
+      <input libport="TA2" port0="TA2" />
+      <input libport="TB1" port0="TB1" />
+      <input libport="TB2" port0="TB2" />
+      <input libport="TAB" port0="TAB" />
+      <input libport="TSL" port0="TSL" />
+      <input libport="TAS1" port0="TAS1" />
+      <input libport="TAS2" port0="TAS2" />
+      <input libport="TBS1" port0="TBS1" />
+      <input libport="TBS2" port0="TBS2" />
+      <output libport="TZ" port0="TZ" />
+    </tfrag_macro>
+    <bfrag_macro mcell="LOGIC">
+      <input libport="BA1" port0="BA1" />
+      <input libport="BA2" port0="BA2" />
+      <input libport="BB1" port0="BB1" />
+      <input libport="BB2" port0="BB2" />
+      <input libport="BAB" port0="BAB" />
+      <input libport="BSL" port0="BSL" />
+      <input libport="BAS1" port0="BAS1" />
+      <input libport="BAS2" port0="BAS2" />
+      <input libport="BBS1" port0="BBS1" />
+      <input libport="BBS2" port0="BBS2" />
+      <inputVCC pwrport="VCC" port0="TBS" />
+      <output libport="CZ" port0="CZ" />
+    </bfrag_macro>
+    <qfrag_macro mcell="LOGIC">
+      <input libport="QST" port0="QST" />
+      <input libport="QRT" port0="QRT" />
+      <input libport="QDS" port0="QDS" />
+      <input libport="QDI" port0="QDI" />
+      <input libport="QEN" port0="QEN" />
+      <input libport="QCK" port0="QCK" />
+      <input libport="QCKS" port0="QCKS" />
+      <output libport="QZ" port0="QZ" />
+    </qfrag_macro>
+    <ffrag_macro mcell="LOGIC">
+      <input libport="F1" port0="F1" />
+      <input libport="F2" port0="F2" />
+      <input libport="FS" port0="FS" />
+      <output libport="FZ" port0="FZ" />
+    </ffrag_macro>
+    <btfrag_macro mcell="LOGIC">
+      <input libport="TA1" port0="TA1" />
+      <input libport="TA2" port0="TA2" />
+      <input libport="TB1" port0="TB1" />
+      <input libport="TB2" port0="TB2" />
+      <input libport="TAB" port0="TAB" />
+      <input libport="TSL" port0="TSL" />
+      <input libport="TAS1" port0="TAS1" />
+      <input libport="TAS2" port0="TAS2" />
+      <input libport="TBS1" port0="TBS1" />
+      <input libport="TBS2" port0="TBS2" />
+      <input libport="BA1" port0="BA1" />
+      <input libport="BA2" port0="BA2" />
+      <input libport="BB1" port0="BB1" />
+      <input libport="BB2" port0="BB2" />
+      <input libport="BAB" port0="BAB" />
+      <input libport="BSL" port0="BSL" />
+      <input libport="BAS1" port0="BAS1" />
+      <input libport="BAS2" port0="BAS2" />
+      <input libport="BBS1" port0="BBS1" />
+      <input libport="BBS2" port0="BBS2" />
+      <input libport="TBS" port0="TBS" />
+      <output libport="CZ" port0="CZ" />
+      <output libport="TZ" port0="TZ" />
+    </btfrag_macro>
+    <bqfrag_macro mcell="LOGIC">
+      <input libport="BA1" port0="BA1" />
+      <input libport="BA2" port0="BA2" />
+      <input libport="BB1" port0="BB1" />
+      <input libport="BB2" port0="BB2" />
+      <input libport="BAB" port0="BAB" />
+      <input libport="BSL" port0="BSL" />
+      <input libport="BAS1" port0="BAS1" />
+      <input libport="BAS2" port0="BAS2" />
+      <input libport="BBS1" port0="BBS1" />
+      <input libport="BBS2" port0="BBS2" />
+      <input libport="QST" port0="QST" />
+      <input libport="QRT" port0="QRT" />
+      <input libport="QDS" port0="QDS" />
+      <input libport="QDI" port0="QDI" />
+      <input libport="QEN" port0="QEN" />
+      <input libport="QCK" port0="QCK" />
+      <input libport="QCKS" port0="QCKS" />
+      <inputVCC pwrport="VCC" port0="TBS" />
+      <output libport="CZ" port0="CZ" />
+      <output libport="QZ" port0="QZ" />
+    </bqfrag_macro>
+    <tqfrag_macro mcell="LOGIC">
+      <input libport="TA1" port0="TA1" />
+      <input libport="TA2" port0="TA2" />
+      <input libport="TB1" port0="TB1" />
+      <input libport="TB2" port0="TB2" />
+      <input libport="TAB" port0="TAB" />
+      <input libport="TSL" port0="TSL" />
+      <input libport="TAS1" port0="TAS1" />
+      <input libport="TAS2" port0="TAS2" />
+      <input libport="TBS1" port0="TBS1" />
+      <input libport="TBS2" port0="TBS2" />
+      <input libport="QST" port0="QST" />
+      <input libport="QRT" port0="QRT" />
+      <input libport="QDS" port0="QDS" />
+      <input libport="QDI" port0="QDI" />
+      <input libport="QEN" port0="QEN" />
+      <input libport="QCK" port0="QCK" />
+      <input libport="QCKS" port0="QCKS" />
+      <inputGND pwrport="GND" port0="TBS" />
+      <output libport="QZ" port0="QZ" />
+      <output libport="TZ" port0="TZ" />
+    </tqfrag_macro>
+    <bqtfrag_macro mcell="LOGIC">
+      <input libport="TA1" port0="TA1" />
+      <input libport="TA2" port0="TA2" />
+      <input libport="TB1" port0="TB1" />
+      <input libport="TB2" port0="TB2" />
+      <input libport="TAB" port0="TAB" />
+      <input libport="TSL" port0="TSL" />
+      <input libport="TAS1" port0="TAS1" />
+      <input libport="TAS2" port0="TAS2" />
+      <input libport="TBS1" port0="TBS1" />
+      <input libport="TBS2" port0="TBS2" />
+      <input libport="BA1" port0="BA1" />
+      <input libport="BA2" port0="BA2" />
+      <input libport="BB1" port0="BB1" />
+      <input libport="BB2" port0="BB2" />
+      <input libport="BAB" port0="BAB" />
+      <input libport="BSL" port0="BSL" />
+      <input libport="BAS1" port0="BAS1" />
+      <input libport="BAS2" port0="BAS2" />
+      <input libport="BBS1" port0="BBS1" />
+      <input libport="BBS2" port0="BBS2" />
+      <input libport="QST" port0="QST" />
+      <input libport="QRT" port0="QRT" />
+      <input libport="QDS" port0="QDS" />
+      <input libport="QDI" port0="QDI" />
+      <input libport="QEN" port0="QEN" />
+      <input libport="QCK" port0="QCK" />
+      <input libport="QCKS" port0="QCKS" />
+      <input libport="TBS" port0="TBS" />
+      <output libport="CZ" port0="CZ" />
+      <output libport="TZ" port0="TZ" />
+      <output libport="QZ" port0="QZ" />
+    </bqtfrag_macro>
+    <fqfrag_macro mcell="LOGIC">
+      <input libport="F1" port0="F1" />
+      <input libport="F2" port0="F2" />
+      <input libport="FS" port0="FS" />
+      <input libport="QST" port0="QST" />
+      <input libport="QRT" port0="QRT" />
+      <input libport="QDS" port0="QDS" />
+      <input libport="QDI" port0="QDI" />
+      <input libport="QEN" port0="QEN" />
+      <input libport="QCK" port0="QCK" />
+      <input libport="QCKS" port0="QCKS" />
+      <output libport="FZ" port0="FZ" />
+      <output libport="QZ" port0="QZ" />
+    </fqfrag_macro>
+    <dff mcell="LOGIC">
+      <input libport="D" port0="QDI" />
+      <input libport="CLK" port0="QCK" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F1" port11="F2" port12="FS" port13="QRT" port14="QST" port15="TA1" port16="TA2" port17="TAB" port18="TAS1" port19="TAS2" port20="TB1" port21="TB2" port22="TBS1" port23="TBS2" port24="TSL" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="QEN" port3="TBS" />
+      <output libport="Q" port0="QZ" />
+    </dff>
+    <dffc mcell="LOGIC">
+      <input libport="D" port0="QDI" />
+      <input libport="CLK" port0="QCK" />
+      <input libport="CLR" port0="QRT" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F1" port11="F2" port12="FS" port13="QST" port14="TA1" port15="TA2" port16="TAB" port17="TAS1" port18="TAS2" port19="TB1" port20="TB2" port21="TBS1" port22="TBS2" port23="TSL" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="QEN" port3="TBS" />
+      <output libport="Q" port0="QZ" />
+    </dffc>
+    <dffp mcell="LOGIC">
+      <input libport="D" port0="QDI" />
+      <input libport="CLK" port0="QCK" />
+      <input libport="PRE" port0="QST" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F1" port11="F2" port12="FS" port13="QRT" port14="TA1" port15="TA2" port16="TAB" port17="TAS1" port18="TAS2" port19="TB1" port20="TB2" port21="TBS1" port22="TBS2" port23="TSL" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="QEN" port3="TBS" />
+      <output libport="Q" port0="QZ" />
+    </dffp>
+    <dffpc mcell="LOGIC">
+      <input libport="D" port0="QDI" />
+      <input libport="CLK" port0="QCK" />
+      <input libport="CLR" port0="QRT" />
+      <input libport="PRE" port0="QST" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F1" port11="F2" port12="FS" port13="TA1" port14="TA2" port15="TAB" port16="TAS1" port17="TAS2" port18="TB1" port19="TB2" port20="TBS1" port21="TBS2" port22="TSL" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="QEN" port3="TBS" />
+      <output libport="Q" port0="QZ" />
+    </dffpc>
+    <dffe mcell="LOGIC">
+      <input libport="D" port0="QDI" />
+      <input libport="CLK" port0="QCK" />
+      <input libport="EN" port0="QEN" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F1" port11="F2" port12="FS" port13="QRT" port14="QST" port15="TA1" port16="TA2" port17="TAB" port18="TAS1" port19="TAS2" port20="TB1" port21="TB2" port22="TBS1" port23="TBS2" port24="TSL" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="TBS" />
+      <output libport="Q" port0="QZ" />
+    </dffe>
+    <dffec mcell="LOGIC">
+      <input libport="D" port0="QDI" />
+      <input libport="CLK" port0="QCK" />
+      <input libport="EN" port0="QEN" />
+      <input libport="CLR" port0="QRT" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F1" port11="F2" port12="FS" port13="TA1" port14="TA2" port15="TAB" port16="TAS1" port17="TAS2" port18="TB1" port19="TB2" port20="TBS1" port21="TBS2" port22="TSL" port23="QST" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="TBS" />
+      <output libport="Q" port0="QZ" />
+    </dffec>
+    <dffepc mcell="LOGIC">
+      <input libport="D" port0="QDI" />
+      <input libport="CLK" port0="QCK" />
+      <input libport="EN" port0="QEN" />
+      <input libport="CLR" port0="QRT" />
+      <input libport="PRE" port0="QST" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F1" port11="F2" port12="FS" port13="TA1" port14="TA2" port15="TAB" port16="TAS1" port17="TAS2" port18="TB1" port19="TB2" port20="TBS1" port21="TBS2" port22="TSL" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="TBS" />
+      <output libport="Q" port0="QZ" />
+    </dffepc>
+    <!-- Intport ?? -->
+    <dffsec mcell="LOGIC">
+      <input libport="D" port0="F1" />
+      <input libport="CLR" port0="FS" />
+      <input libport="EN" port0="QEN" />
+      <input libport="CLK" port0="QCK" />
+      <input intport="N_11" port0="FZ" port1="QDI" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F2" port11="QRT" port12="QST" port13="TA1" port14="TA2" port15="TAB" port16="TAS1" port17="TAS2" port18="TB1" port19="TB2" port20="TBS1" port21="TBS2" port22="TSL" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="TBS" />
+      <output libport="Q" port0="QZ" />
+    </dffsec>
+    <dffsep mcell="LOGIC">
+      <input libport="P" port0="FS" />
+      <input libport="D" port0="F1" />
+      <input libport="CLK" port0="QCK" />
+      <input libport="EN" port0="QEN" />
+      <input intport="N_11" port0="FZ" port1="QDI" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="QRT" port11="QST" port12="TA1" port13="TA2" port14="TAB" port15="TAS1" port16="TAS2" port17="TB1" port18="TB2" port19="TBS1" port20="TBS2" port21="TSL" />
+      <inputVCC pwrport="VCC" port0="F2" port1="QCKS" port2="QDS" port3="TBS" />
+      <output libport="Q" port0="QZ" />
+    </dffsep>
+    <dffsle mcell="LOGIC">
+      <input libport="LD" port0="FS" />
+      <input libport="D" port0="F1" />
+      <input libport="DATA" port0="F2" />
+      <input libport="CLK" port0="QCK" />
+      <input libport="EN" port0="QEN" />
+      <input intport="Q1" port0="FZ" port1="QDI" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="QRT" port11="QST" port12="TA1" port13="TA2" port14="TAB" port15="TAS1" port16="TAS2" port17="TB1" port18="TB2" port19="TBS1" port20="TBS2" port21="TSL" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="TBS" />
+      <output libport="Q" port0="QZ" />
+    </dffsle>
+    <dffsep_apc mcell="LOGIC">
+      <input libport="P" port0="FS" />
+      <input libport="D" port0="F1" />
+      <input libport="CLK" port0="QCK" />
+      <input libport="EN" port0="QEN" />
+      <input libport="ASET" port0="QST" />
+      <input libport="ARST" port0="QRT" />
+      <input intport="N_11" port0="FZ" port1="QDI" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="TA1" port11="TA2" port12="TAB" port13="TAS1" port14="TAS2" port15="TB1" port16="TB2" port17="TBS1" port18="TBS2" port19="TSL" />
+      <inputVCC pwrport="VCC" port0="F2" port1="QCKS" port2="QDS" port3="TBS" />
+      <output libport="Q" port0="QZ" />
+    </dffsep_apc>
+    <dffsec_apc mcell="LOGIC">
+      <input libport="D" port0="F1" />
+      <input libport="CLR" port0="FS" />
+      <input libport="EN" port0="QEN" />
+      <input libport="CLK" port0="QCK" />
+      <input libport="ASET" port0="QST" />
+      <input libport="ARST" port0="QRT" />
+      <input intport="N_11" port0="FZ" port1="QDI" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F2" port11="TA1" port12="TA2" port13="TAB" port14="TAS1" port15="TAS2" port16="TB1" port17="TB2" port18="TBS1" port19="TBS2" port20="TSL" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="TBS" />
+      <output libport="Q" port0="QZ" />
+    </dffsec_apc>
+    <dffsle_apc mcell="LOGIC">
+      <input libport="LD" port0="FS" />
+      <input libport="D" port0="F1" />
+      <input libport="DATA" port0="F2" />
+      <input libport="ASET" port0="QST" />
+      <input libport="ARST" port0="QRT" />
+      <input libport="CLK" port0="QCK" />
+      <input libport="EN" port0="QEN" />
+      <input intport="Q1" port0="FZ" port1="QDI" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="TA1" port11="TA2" port12="TAB" port13="TAS1" port14="TAS2" port15="TB1" port16="TB2" port17="TBS1" port18="TBS2" port19="TSL" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="TBS" />
+      <output libport="Q" port0="QZ" />
+    </dffsle_apc>
+    <dla mcell="LOGIC">
+      <input libport="G" port0="TSL" />
+      <input libport="D" port0="TA2" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F1" port11="F2" port12="FS" port13="QCK" port14="QDI" port15="QEN" port16="QRT" port17="QST" port18="TAB" port19="TAS1" port20="TAS2" port21="TB1" port22="TB2" port23="TBS1" port24="TBS2" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="TBS" />
+      <output libport="Q" port0="TA1" />
+    </dla>
+    <dlae mcell="LOGIC">
+      <input libport="EN" port0="TAB" />
+      <input libport="G" port0="TSL" />
+      <input libport="D" port0="TB2" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F1" port11="F2" port12="FS" port13="QCK" port14="QDI" port15="QEN" port16="QRT" port17="QST" port18="TAS1" port19="TAS2" port20="TBS1" port21="TBS2" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="TBS" />
+      <output libport="Q" port0="TA1" port1="TA2" port2="TB1" port3="TZ" />
+    </dlae>
+    <dlac mcell="LOGIC">
+      <input libport="CLR" port0="TAB" />
+      <input libport="G" port0="TSL" />
+      <input libport="D" port0="TA2" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F1" port11="F2" port12="FS" port13="QCK" port14="QDI" port15="QEN" port16="QRT" port17="QST" port18="TAS1" port19="TAS2" port20="TB1" port21="TB2" port22="TBS1" port23="TBS2" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="TBS" />
+      <output libport="Q" port0="TA1" port1="TZ" />
+    </dlac>
+    <dlaec mcell="LOGIC">
+      <input libport="EN" port0="TAB" />
+      <input libport="G" port0="TSL" />
+      <input libport="D" port0="TB2" />
+      <input libport="CLR" port0="TBS" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F1" port11="F2" port12="FS" port13="QCK" port14="QDI" port15="QEN" port16="QRT" port17="QST" port18="TAS1" port19="TAS2" port20="TBS1" port21="TBS2" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" />
+      <output libport="Q" port0="TA1" port1="TA2" port2="TB1" port3="TZ" />
+    </dlaec>
+    <dlad mcell="LOGIC">
+      <input libport="G" port0="BAB" port1="TAB" />
+      <input libport="D1" port0="TB1" />
+      <input libport="D2" port0="BB1" />
+      <inputGND pwrport="GND" port0="BA2" port1="BAS1" port2="BAS2" port3="BB2" port4="BBS1" port5="BBS2" port6="BSL" port7="F1" port8="F2" port9="FS" port10="QCK" port11="QDI" port12="QEN" port13="QRT" port14="QST" port15="TA2" port16="TAS1" port17="TAS2" port18="TB2" port19="TBS1" port20="TBS2" port21="TSL" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="TBS" />
+      <output libport="Q1" port0="TA1" port1="TZ" />
+      <output libport="Q2" port0="BA1" port1="CZ" />
+    </dlad>
+    <gpio_cell_macro mcell="BIDIR">
+      <input libport="ESEL" port0="ESEL" />
+      <input libport="IE" port0="IE" />
+      <input libport="OSEL" port0="OSEL" />
+      <input libport="OQI" port0="OQI" />
+      <input libport="OQE" port0="OQE" />
+      <input libport="DS" port0="DS" />
+      <input libport="FIXHOLD" port0="FIXHOLD" />
+      <input libport="IQE" port0="IQE" />
+      <input libport="IQC" port0="IQC" />
+      <input libport="IQCS" port0="IQCS" />
+      <input libport="INEN" port0="INEN" />
+      <input libport="IQR" port0="IQR" />
+      <input libport="WPD" port0="WPD" />
+      <output libport="IQZ" port0="IQZ" />
+      <output libport="IZ" port0="IZ" />
+      <inout libport="IP" port0="IP" />
+    </gpio_cell_macro>
+    <inpad mcell="BIDIR">
+      <input libport="P" port0="IP" />
+      <inputVCC pwrport="VCC" port0="ESEL" port1="OSEL" port2="INEN" />
+      <inputGND pwrport="GND" port0="DS" port1="FIXHOLD" port2="IE" port3="IQC" port4="IQCS" port5="IQE" port6="IQR" port7="OQE" port8="OQI" port9="WPD" />
+      <output libport="Q" port0="IZ" />
+    </inpad>
+    <inpadff mcell="BIDIR">
+      <input libport="P" port0="IP" />
+      <input libport="FFEN" port0="IQE" />
+      <input libport="FFCLR" port0="IQR" />
+      <input libport="FFCLK" port0="IQC" />
+      <inputVCC pwrport="VCC" port0="ESEL" port1="OSEL" port2="INEN" />
+      <inputGND pwrport="GND" port0="IE" port1="OQI" port2="OQE" port3="DS" port4="FIXHOLD" port5="IQCS" port6="WPD" />
+      <output libport="Q" port0="IZ" />
+      <output libport="FFQ" port0="IQZ" />
+    </inpadff>
+    <outpad mcell="BIDIR">
+      <input libport="A" port0="OQI" />
+      <inputVCC pwrport="VCC" port0="ESEL" port1="IE" port2="OSEL" />
+      <inputGND pwrport="GND" port0="WPD" port1="INEN" port2="OQE" port3="DS" port4="FIXHOLD" port5="IQE" port6="IQR" port7="IQCS" port8="IQC" />
+      <output libport="P" port0="IP" />
+    </outpad>
+    <outpadff mcell="BIDIR">
+      <input libport="A" port0="OQI" />
+      <input libport="FFEN" port0="OQE" />
+      <input libport="FFCLR" port0="IQR" />
+      <input libport="FFCLK" port0="IQC" />
+      <inputVCC pwrport="VCC" port0="ESEL" port1="IE" />
+      <inputGND pwrport="GND" port0="INEN" port1="OSEL" port2="IQE" port3="DS" port4="FIXHOLD" port5="IQCS" port6="WPD" />
+      <output libport="P" port0="IP" />
+    </outpadff>
+    <tripad mcell="BIDIR">
+      <input libport="A" port0="OQI" />
+      <input libport="EN" port0="IE" />
+      <inputVCC pwrport="VCC" port0="ESEL" port1="OSEL" />
+      <inputGND pwrport="GND" port0="INEN" port1="WPD" port2="OQE" port3="DS" port4="FIXHOLD" port5="IQE" port6="IQR" port7="IQCS" port8="IQC" />
+      <output libport="P" port0="IP" />
+    </tripad>
+    <tripadff mcell="BIDIR">
+      <input libport="A" port0="OQI" />
+      <input libport="EN" port0="IE" />
+      <input libport="FFEN" port0="OQE" />
+      <input libport="FFCLR" port0="IQR" />
+      <input libport="FFCLK" port0="IQC" />
+      <inputVCC pwrport="VCC" port0="ESEL" />
+      <inputGND pwrport="GND" port0="OSEL" port1="DS" port2="FIXHOLD" port3="IQE" port4="IQCS" port5="INEN" port6="WPD" />
+      <output libport="P" port0="IP" />
+    </tripadff>
+    <bipad mcell="BIDIR">
+      <inout libport="P" port0="IP" />
+      <input libport="EN" port0="IE" />
+      <input libport="A" port0="OQI" />
+      <inputVCC pwrport="VCC" port0="ESEL" port1="OSEL" port2="INEN" />
+      <inputGND pwrport="GND" port0="IQC" port1="WPD" port2="OQE" port3="DS" port4="FIXHOLD" port5="IQE" port6="IQR" port7="IQCS" />
+      <output libport="Q" port0="IZ" />
+    </bipad>
+    <sdiomux mcell="SDIOMUX">
+      <input libport="OQI" port0="OQI" />
+      <input libport="OE" port0="OE" />
+      <input libport="IE" port0="IE" />
+      <output libport="IZ" port0="IZ" />
+      <inout libport="IP" port0="IP" />
+    </sdiomux>
+    <CLOCK_Cell mcell="CLOCK">
+      <output clkport="IC" port0="IC" />
+      <input clkport="IP" port0="IP" />
+    </CLOCK_Cell>
+    <ckpad mcell="CLOCK">
+      <output clkport="Q" port0="IC" />
+      <input clkport="P" port0="IP" />
+    </ckpad>
+    <QMUX mcell="QMUX">
+      <input clkport="HSCKIN" port0="HSCKIN" />
+      <input libport="IS0" port0="IS0" />
+      <input libport="IS1" port0="IS1" />
+      <input clkport="QCLKIN0" port0="QCLKIN0" />      
+      <output clkport="IZ" port0="IZ" />
+    </QMUX>
+    <GMUX mcell="GMUX">
+      <input clkport="IP" port0="IP" />
+      <input libport="IS0" port0="IS0" />
+      <input libport="IS1" port0="IS1" />
+      <input clkport="IC" port0="IC" />
+      <output clkport="IZ" port0="IZ" />
+    </GMUX>
+    <CAND mcell="CAND">
+      <input clkport="CLK" port0="IC" />
+      <input libport="EN" port0="EN" />     
+      <output clkport="Z" port0="IZ" />
+    </CAND>
+    <GCLKBUFF mcell="QMUX">
+      <input clkport="A" port0="HSCKIN" />    
+      <inputVCC pwrport="VCC" port0="IS0" port1="IS1" />
+      <inputGND pwrport="GND" port0="QCLKIN0" />  
+      <output clkport="Z" port0="IZ" />
+    </GCLKBUFF>
+    <ram8k_2x1_cell_macro mcell="RAM">
+      <input libport="A1_0[10:0]" port0="A1_0">
+        <bus name="A1_0" msb="10" lsb="0" step="1" />
+      </input>
+      <input libport="A2_0[10:0]" port0="A2_0">
+        <bus name="A2_0" msb="10" lsb="0" step="1" />
+      </input>
+      <input libport="A1_1[10:0]" port0="A1_1">
+        <bus name="A1_1" msb="10" lsb="0" step="1" />
+      </input>
+      <input libport="A2_1[10:0]" port0="A2_1">
+        <bus name="A2_1" msb="10" lsb="0" step="1" />
+      </input>
+      <input libport="ASYNC_FLUSH_0" port0="ASYNC_FLUSH_0" />
+      <input libport="ASYNC_FLUSH_1" port0="ASYNC_FLUSH_1" />
+      <input libport="ASYNC_FLUSH_S0" port0="ASYNC_FLUSH_S0" />
+      <input libport="ASYNC_FLUSH_S1" port0="ASYNC_FLUSH_S1" />
+      <input libport="CLK1_0" port0="CLK1_0" />
+      <input libport="CLK2_0" port0="CLK2_0" />
+      <input libport="CLK1EN_0" port0="CLK1EN_0" />
+      <input libport="CLK2EN_0" port0="CLK2EN_0" />
+      <input libport="CLK1_1" port0="CLK1_1" />
+      <input libport="CLK2_1" port0="CLK2_1" />
+      <input libport="CLK1S_0" port0="CLK1S_0" />
+      <input libport="CLK1S_1" port0="CLK1S_1" />
+      <input libport="CLK2S_0" port0="CLK2S_0" />
+      <input libport="CLK2S_1" port0="CLK2S_1" />
+      <input libport="CLK1EN_1" port0="CLK1EN_1" />
+      <input libport="CLK2EN_1" port0="CLK2EN_1" />
+      <input libport="CONCAT_EN_0" port0="CONCAT_EN_0" />
+      <input libport="CONCAT_EN_1" port0="CONCAT_EN_1" />
+      <input libport="CS1_0" port0="CS1_0" />
+      <input libport="CS2_0" port0="CS2_0" />
+      <input libport="CS1_1" port0="CS1_1" />
+      <input libport="CS2_1" port0="CS2_1" />
+      <input libport="DIR_0" port0="DIR_0" />
+      <input libport="DIR_1" port0="DIR_1" />
+      <input libport="FIFO_EN_0" port0="FIFO_EN_0" />
+      <input libport="FIFO_EN_1" port0="FIFO_EN_1" />
+      <input libport="P1_0" port0="P1_0" />
+      <input libport="P2_0" port0="P2_0" />
+      <input libport="P1_1" port0="P1_1" />
+      <input libport="P2_1" port0="P2_1" />
+      <input libport="PIPELINE_RD_0" port0="PIPELINE_RD_0" />
+      <input libport="PIPELINE_RD_1" port0="PIPELINE_RD_1" />
+      <input libport="SYNC_FIFO_0" port0="SYNC_FIFO_0" />
+      <input libport="SYNC_FIFO_1" port0="SYNC_FIFO_1" />
+      <input libport="WD_0[17:0]" port0="WD_0">
+        <bus name="WD_0" msb="17" lsb="0" step="1" />
+      </input>
+      <input libport="WD_1[17:0]" port0="WD_1">
+        <bus name="WD_1" msb="17" lsb="0" step="1" />
+      </input>
+      <input libport="WIDTH_SELECT1_0[1:0]" port0="WIDTH_SELECT1_0">
+        <bus name="WIDTH_SELECT1_0" msb="1" lsb="0" step="1" />
+      </input>
+      <input libport="WIDTH_SELECT2_0[1:0]" port0="WIDTH_SELECT2_0">
+        <bus name="WIDTH_SELECT2_0" msb="1" lsb="0" step="1" />
+      </input>
+      <input libport="WIDTH_SELECT1_1[1:0]" port0="WIDTH_SELECT1_1">
+        <bus name="WIDTH_SELECT1_1" msb="1" lsb="0" step="1" />
+      </input>
+      <input libport="WIDTH_SELECT2_1[1:0]" port0="WIDTH_SELECT2_1">
+        <bus name="WIDTH_SELECT2_1" msb="1" lsb="0" step="1" />
+      </input>
+      <input libport="WEN1_0[1:0]" port0="WEN1_0">
+        <bus name="WEN1_0" msb="1" lsb="0" step="1" />
+      </input>
+      <input libport="WEN1_1[1:0]" port0="WEN1_1">
+        <bus name="WEN1_1" msb="1" lsb="0" step="1" />
+      </input>
+      <input libport="RMA[3:0]" port0="RMA">
+        <bus name="RMA" msb="3" lsb="0" step="1" />
+      </input>
+      <input libport="RMB[3:0]" port0="RMB">
+        <bus name="RMB" msb="3" lsb="0" step="1" />
+      </input>
+      <input libport="SD" port0="SD" />
+      <input libport="DS" port0="DS" />
+      <input libport="LS" port0="LS" />
+      <input libport="SD_RB1" port0="SD_RB1" />
+      <input libport="LS_RB1" port0="LS_RB1" />
+      <input libport="DS_RB1" port0="DS_RB1" />
+      <input libport="RMEA" port0="RMEA" />
+      <input libport="RMEB" port0="RMEB" />
+      <input libport="TEST1A" port0="TEST1A" />
+      <input libport="TEST1B" port0="TEST1B" />
+      <output libport="Almost_Empty_0" port0="Almost_Empty_0" />
+      <output libport="Almost_Empty_1" port0="Almost_Empty_1" />
+      <output libport="Almost_Full_0" port0="Almost_Full_0" />
+      <output libport="Almost_Full_1" port0="Almost_Full_1" />
+      <output libport="POP_FLAG_0[3:0]" port0="POP_FLAG_0">
+        <bus name="POP_FLAG_0" msb="3" lsb="0" step="1" />
+      </output>
+      <output libport="POP_FLAG_1[3:0]" port0="POP_FLAG_1">
+        <bus name="POP_FLAG_1" msb="3" lsb="0" step="1" />
+      </output>
+      <output libport="PUSH_FLAG_0[3:0]" port0="PUSH_FLAG_0">
+        <bus name="PUSH_FLAG_0" msb="3" lsb="0" step="1" />
+      </output>
+      <output libport="PUSH_FLAG_1[3:0]" port0="PUSH_FLAG_1">
+        <bus name="PUSH_FLAG_1" msb="3" lsb="0" step="1" />
+      </output>
+      <output libport="RD_0[17:0]" port0="RD_0">
+        <bus name="RD_0" msb="17" lsb="0" step="1" />
+      </output>
+      <output libport="RD_1[17:0]" port0="RD_1">
+        <bus name="RD_1" msb="17" lsb="0" step="1" />
+      </output>
+      <!--  /* TO BE DISCUSSED WITH VISHNU, What about CellFunctions? */ -->
+      
+      <!--  /* TO BE DISCUSSED END   */  -->
+    </ram8k_2x1_cell_macro>
+    <dlamux mcell="LOGIC">
+      <input libport="D0" port0="TB1" />
+      <input libport="D1" port0="TB2" />
+      <input libport="G" port0="TAB" />
+      <input libport="SEL" port0="TSL" />
+      <inputGND pwrport="GND" port0="BA1" port1="BA2" port2="BAB" port3="BAS1" port4="BAS2" port5="BB1" port6="BB2" port7="BBS1" port8="BBS2" port9="BSL" port10="F1" port11="F2" port12="FS" port13="QCK" port14="QDI" port15="QEN" port16="QRT" port17="QST" port18="TAS1" port19="TAS2" port20="TBS1" port21="TBS2" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="TBS" />
+      <output libport="Q" port0="TA1" port1="TA2" port2="TZ" />
+    </dlamux>
+    <dlaemux mcell="LOGIC">
+      <input libport="D0" port0="BB1" />
+      <input libport="D1" port0="BB2" />
+      <input libport="EN" port0="TBS" />
+      <input libport="G" port0="BAB" />
+      <input libport="SEL" port0="BSL" />
+      <inputGND pwrport="GND" port0="BAS1" port1="BAS2" port2="BBS1" port3="BBS2" port4="F1" port5="F2" port6="FS" port7="QCK" port8="QDI" port9="QEN" port10="QRT" port11="QST" port12="TA2" port13="TAB" port14="TAS1" port15="TAS2" port16="TB1" port17="TB2" port18="TBS1" port19="TBS2" port20="TSL" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" />
+      <output libport="Q" port0="BA1" port1="BA2" port2="TA1" port3="CZ" />
+    </dlaemux>
+    <dlade mcell="LOGIC">
+      <input libport="D2" port0="BB2" />
+      <input libport="D1" port0="TB2" />
+      <input libport="EN" port0="TSL" port1="BSL" />
+      <input libport="G" port0="TAB" port1="BAB" />
+      <inputGND pwrport="GND" port0="BAS1" port1="BAS2" port2="BBS1" port3="BBS2" port4="F1" port5="F2" port6="FS" port7="QCK" port8="QDI" port9="QEN" port10="QRT" port11="QST" port12="TAS1" port13="TAS2" port14="TBS1" port15="TBS2" />
+      <inputVCC pwrport="VCC" port0="QCKS" port1="QDS" port2="TBS" />
+      <output libport="Q1" port0="TA1" port1="TA2" port2="TB1" port3="TZ" />
+      <output libport="Q2" port0="BA1" port1="BA2" port2="BB1" port3="CZ" />
+    </dlade>
+    <bipadod mcell="BIDIR">
+      <input libport="P" port0="IP" />
+      <input libport="EN" port0="IE" />
+      <inputVCC pwrport="VCC" port0="ESEL" port1="OSEL" port2="INEN" port3="OQI" />
+      <inputGND pwrport="GND" port0="DS" port1="FIXHOLD" port2="IQC" port3="IQCS" port4="IQE" port5="IQR" port6="OQE" port7="WPD" />
+      <output libport="Q" port0="IZ" />
+    </bipadod>
+    <bipados mcell="BIDIR">
+      <input libport="P" port0="IP" />
+      <input libport="EN" port0="IE" />
+      <inputVCC pwrport="VCC" port0="ESEL" port1="OSEL" port2="INEN" />
+      <inputGND pwrport="GND" port0="DS" port1="FIXHOLD" port2="IQC" port3="IQCS" port4="IQE" port5="IQR" port6="OQE" port7="OQI" port8="WPD" />
+      <output libport="Q" port0="IZ" />
+    </bipados>
+    <!--
+	<ckpad2_dyn_en>
+	This is not supported in the current flow, as this uses two different types( i.e ckpad and cand ) for its implementation. The user should bifurcate ckpad2_dyn_en into these two types for implementation.
+	</ckpad2_dyn_en>                                                                    
+	-->
+    <LUT1 mcell="LOGIC">
+      <input libport="I0" port0="FS" />
+      <output libport="O" port0="FZ" />
+      <inputVCC pwrport="VCC" port0="F1" />
+      <inputGND pwrport="GND" port0="F2" />
+    </LUT1>
+    <LUT2 mcell="LOGIC">
+      <input libport="I0" port0="TSL" />
+      <input libport="I1" port0="TAB" />
+      <output libport="O" port0="TZ" />
+      <inputVCC pwrport="VCC" port0="TA1" port1="TA2" port2="TB1" port3="TB2" />
+      <inputGND pwrport="GND" port0="TAS1" port1="TAS2" port2="TBS1" port3="TBS2" />
+    </LUT2>
+    <LUT3 mcell="LOGIC">
+      <input libport="I0" port0="TA1" port1="TA2" port2="TB1" port3="TB2" />
+      <input libport="I1" port0="TSL" />
+      <input libport="I2" port0="TAB" />
+      <output libport="O" port0="TZ" />
+      <inputVCC pwrport="VCC" port0="TAS1" port1="TAS2" />
+      <inputGND pwrport="GND" port0="TBS1" port1="TBS2" />
+    </LUT3>
+    <LUT4 mcell="LOGIC">
+      <input libport="I0" port0="TA1" port1="TA2" port2="TB1" port3="TB2" port4="BA1" port5="BA2" port6="BB1" port7="BB2" />
+      <input libport="I1" port0="TSL" port1="BSL" />
+      <input libport="I2" port0="TAB" port1="BAB" />
+      <input libport="I3" port0="TBS" />
+      <output libport="O" port0="CZ" />
+      <inputVCC pwrport="VCC" port0="TAS1" port1="TAS2" port2="BAS1" port3="BAS2" />
+      <inputGND pwrport="GND" port0="TBS1" port1="TBS2" port2="BBS1" port3="BBS2" />
+    </LUT4>
+    <qlal4s3b_cell_macro mcell="ASSP">
+      <input libport="WB_CLK" port0="WB_CLK" />
+      <input libport="WBs_ACK" port0="WBs_ACK" />
+      <input libport="FB_Busy" port0="FB_Busy" />
+      <input libport="Sys_PKfb_Clk" port0="Sys_PKfb_Clk" />
+      <input libport="FB_PKfbSOF" port0="FB_PKfbSOF" />
+      <input libport="FB_PKfbEOF" port0="FB_PKfbEOF" />
+      <input libport="Sys_PSel" port0="Sys_PSel" />
+      <input libport="SPIm_PEnable" port0="SPIm_PEnable" />
+      <input libport="SPIm_PWrite" port0="SPIm_PWrite" />
+      <input libport="Device_ID_6S" port0="Device_ID_6S" />
+      <input libport="Device_ID_4S" port0="Device_ID_4S" />
+      <input libport="SPIm_PWdata_26S" port0="SPIm_PWdata_26S" />
+      <input libport="SPIm_PWdata_24S" port0="SPIm_PWdata_24S" />
+      <input libport="SPIm_PWdata_14S" port0="SPIm_PWdata_14S" />
+      <input libport="SPIm_PWdata_11S" port0="SPIm_PWdata_11S" />
+      <input libport="SPIm_PWdata_0S" port0="SPIm_PWdata_0S" />
+      <input libport="SPIm_Paddr_8S" port0="SPIm_Paddr_8S" />
+      <input libport="SPIm_Paddr_6S" port0="SPIm_Paddr_6S" />
+      <input libport="FB_PKfbPush_1S" port0="FB_PKfbPush_1S" />
+      <input libport="FB_PKfbData_31S" port0="FB_PKfbData_31S" />
+      <input libport="FB_PKfbData_21S" port0="FB_PKfbData_21S" />
+      <input libport="FB_PKfbData_19S" port0="FB_PKfbData_19S" />
+      <input libport="FB_PKfbData_9S" port0="FB_PKfbData_9S" />
+      <input libport="FB_PKfbData_6S" port0="FB_PKfbData_6S" />
+      <input libport="Sys_PKfb_ClkS" port0="Sys_PKfb_ClkS" />
+      <input libport="FB_BusyS" port0="FB_BusyS" />
+      <input libport="WB_CLKS" port0="WB_CLKS" />
+      <input libport="WBs_RD_DAT[31:0]" port0="WBs_RD_DAT">
+        <bus name="WBs_RD_DAT" msb="31" lsb="0" step="1" />
+      </input>
+      <input libport="SDMA_Req[3:0]" port0="SDMA_Req">
+        <bus name="SDMA_Req" msb="3" lsb="0" step="1" />
+      </input>
+      <input libport="SDMA_Sreq[3:0]" port0="SDMA_Sreq">
+        <bus name="SDMA_Sreq" msb="3" lsb="0" step="1" />
+      </input>
+      <input libport="FB_msg_out[3:0]" port0="FB_msg_out">
+        <bus name="FB_msg_out" msb="3" lsb="0" step="1" />
+      </input>
+      <input libport="FB_Int_Clr[7:0]" port0="FB_Int_Clr">
+        <bus name="FB_Int_Clr" msb="7" lsb="0" step="1" />
+      </input>
+      <input libport="FB_PKfbData[31:0]" port0="FB_PKfbData">
+        <bus name="FB_PKfbData" msb="31" lsb="0" step="1" />
+      </input>
+      <input libport="FB_PKfbPush[3:0]" port0="FB_PKfbPush">
+        <bus name="FB_PKfbPush" msb="3" lsb="0" step="1" />
+      </input>
+      <input libport="SPIm_Paddr[15:0]" port0="SPIm_Paddr">
+        <bus name="SPIm_Paddr" msb="15" lsb="0" step="1" />
+      </input>
+      <input libport="SPIm_PWdata[31:0]" port0="SPIm_PWdata">
+        <bus name="SPIm_PWdata" msb="31" lsb="0" step="1" />
+      </input>
+      <input libport="Device_ID[15:0]" port0="Device_ID">
+        <bus name="Device_ID" msb="15" lsb="0" step="1" />
+      </input>
+      <input libport="FBIO_In_En[13:0]" port0="FBIO_In_En">
+        <bus name="FBIO_In_En" msb="13" lsb="0" step="1" />
+      </input>
+      <input libport="FBIO_Out[13:0]" port0="FBIO_Out">
+        <bus name="FBIO_Out" msb="13" lsb="0" step="1" />
+      </input>
+      <input libport="FBIO_Out_En[13:0]" port0="FBIO_Out_En">
+        <bus name="FBIO_Out_En" msb="13" lsb="0" step="1" />
+      </input>
+      <!-- <input libport="SFBIO[13:0]" port0="SFBIO">
+        <bus name="SFBIO" msb="13" lsb="0" step="1" />
+      </input> TO BE DISCUSSED -->
+      <output libport="WBs_CYC" port0="WBs_CYC" />
+      <output libport="WBs_WE" port0="WBs_WE" />
+      <output libport="WBs_RD" port0="WBs_RD" />
+      <output libport="WBs_STB" port0="WBs_STB" />
+      <output libport="FB_Start" port0="FB_Start" />
+      <output libport="WB_RST" port0="WB_RST" />
+      <output libport="Sys_PKfb_Rst" port0="Sys_PKfb_Rst" />
+      <output libport="Sys_Clk0" port0="Sys_Clk0" />
+      <output libport="Sys_Clk0_Rst" port0="Sys_Clk0_Rst" />
+      <output libport="Sys_Clk1" port0="Sys_Clk1" />
+      <output libport="Sys_Clk1_Rst" port0="Sys_Clk1_Rst" />
+      <output libport="Sys_Pclk" port0="Sys_Pclk" />
+      <output libport="Sys_Pclk_Rst" port0="Sys_Pclk_Rst" />
+      <output libport="FB_PKfbOverflow" port0="FB_PKfbOverflow" />
+      <output libport="SPIm_PReady" port0="SPIm_PReady" />
+      <output libport="SPIm_PSlvErr" port0="SPIm_PSlvErr" />
+      <output libport="FBIO_In[13:0]" port0="FBIO_In">
+        <bus name="FBIO_In" msb="13" lsb="0" step="1" />
+      </output>
+      <output libport="SPIm_Prdata[31:0]" port0="SPIm_Prdata">
+        <bus name="SPIm_Prdata" msb="31" lsb="0" step="1" />
+      </output>
+      <output libport="TimeStamp[23:0]" port0="TimeStamp">
+        <bus name="TimeStamp" msb="23" lsb="0" step="1" />
+      </output>
+      <output libport="Sensor_Int[7:0]" port0="Sensor_Int">
+        <bus name="Sensor_Int" msb="7" lsb="0" step="1" />
+      </output>
+      <output libport="WBs_WR_DAT[31:0]" port0="WBs_WR_DAT">
+        <bus name="WBs_WR_DAT" msb="31" lsb="0" step="1" />
+      </output>
+      <output libport="SDMA_Active[3:0]" port0="SDMA_Active">
+        <bus name="SDMA_Active" msb="3" lsb="0" step="1" />
+      </output>
+      <output libport="SDMA_Done[3:0]" port0="SDMA_Done">
+        <bus name="SDMA_Done" msb="3" lsb="0" step="1" />
+      </output>
+      <output libport="WBs_ADR[16:0]" port0="WBs_ADR">
+        <bus name="WBs_ADR" msb="16" lsb="0" step="1" />
+      </output>
+      <output libport="WBs_BYTE_STB[3:0]" port0="WBs_BYTE_STB">
+        <bus name="WBs_BYTE_STB" msb="3" lsb="0" step="1" />
+      </output>
+    </qlal4s3b_cell_macro>
+    <qlal4s3_mult_32x32_cell mcell="MULT">
+      <input libport="sel_mul_32x32" port0="sel_mul_32x32" />
+      <input libport="Amult[31:0]" port0="Amult">
+        <bus name="Amult" msb="31" lsb="0" step="1" />
+      </input>
+      <input libport="Valid_mult[1:0]" port0="Valid_mult">
+        <bus name="Valid_mult" msb="1" lsb="0" step="1" />
+      </input>
+      <input libport="Bmult[31:0]" port0="Bmult">
+        <bus name="Bmult" msb="31" lsb="0" step="1" />
+      </input>
+      <output libport="Cmult[63:0]" port0="Cmult">
+        <bus name="Cmult" msb="63" lsb="0" step="1" />
+      </output>
+    </qlal4s3_mult_32x32_cell>
+    <qlal4s3_mult_16x16_cell mcell="MULT">
+      <input libport="sel_mul_32x32" port0="sel_mul_32x32" />
+      <input libport="Amult[31:0]" port0="Amult">
+        <bus name="Amult" msb="31" lsb="0" step="1" />
+      </input>
+      <input libport="Valid_mult[1:0]" port0="Valid_mult">
+        <bus name="Valid_mult" msb="1" lsb="0" step="1" />
+      </input>
+      <input libport="Bmult[31:0]" port0="Bmult">
+        <bus name="Bmult" msb="31" lsb="0" step="1" />
+      </input>
+      <output libport="Cmult[63:0]" port0="Cmult">
+        <bus name="Cmult" msb="63" lsb="0" step="1" />
+      </output>
+    </qlal4s3_mult_16x16_cell>
+  </Library>
+</DeviceLibrary>

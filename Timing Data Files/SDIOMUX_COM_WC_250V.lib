@@ -1,0 +1,54 @@
+SDIOMUX cell POLARPRO_III kfactor 1.0
+
+PORT DELAY {
+
+	
+	pin ( OQI ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( OE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			sdf_cond : "IE == 1'b1";
+	        when : "IE == 1'b1 && OE == 1'b1";	         
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+			timing_type : combinational ;
+			intrinsic_rise  : 0.000 ;
+			intrinsic_fall  : 0.000 ;
+		}
+	}
+	
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+
+		timing() {		
+			sdf_cond : "OE == 1'b0";
+	        when : "IE == 1'b0 && OE == 1'b0";
+			timing_sense : positive_unate;
+			intrinsic_rise  : 0.000 ;
+			intrinsic_fall  : 0.000 ;        
+			timing_type : combinational ;
+			related_pin : "OQI";
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+        }
+	}
+}
+

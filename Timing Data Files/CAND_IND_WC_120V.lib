@@ -1,0 +1,37 @@
+CAND cell POLARPRO_III kfactor 2.8
+
+PORT DELAY {
+
+	pin ( EN ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IC ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			related_pin : "EN";
+			timing_sense : non_unate ;
+			rise_transition : 0.0986565 ;
+			fall_transition : 0.1033390 ;
+			intrinsic_fall : 0.5714400 ;
+			intrinsic_rise : 0.4491120 ;
+		}
+		timing() {
+			related_pin : "IC";
+			timing_sense : positive_unate ;
+			rise_transition : 0.0800645 ;
+			fall_transition : 0.0799370 ;
+			intrinsic_fall : 0.175 ;
+			intrinsic_rise : 0.188 ;
+		}
+	}
+
+}
+

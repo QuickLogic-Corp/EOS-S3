@@ -1,0 +1,90 @@
+QMUX cell POLARPRO_III kfactor 1.0
+
+PORT DELAY {
+
+	pin ( IS0 ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IS1 ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( QCLKIN0 ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( QCLKIN1 ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( QCLKIN2 ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( HSCKIN ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			related_pin : "IS0";
+			timing_sense : non_unate ;
+			rise_transition : 0.0759320 ;
+			fall_transition : 0.0709420 ;
+			intrinsic_fall : 0.6860840 ;
+			intrinsic_rise : 0.7144880 ;
+		}
+		timing() {
+			related_pin : "IS1";
+			timing_sense : non_unate ;
+			rise_transition : 0.0759320 ;
+			fall_transition : 0.0709420 ;
+			intrinsic_fall : 0.6860840 ;
+			intrinsic_rise : 0.7144880 ;
+		}
+		
+		timing() {
+			related_pin : "QCLKIN0";
+			timing_sense : positive_unate ;
+			rise_transition : 0.0996530 ;
+			fall_transition : 0.1035500 ;
+			intrinsic_fall : 0.142 ;
+			intrinsic_rise : 0.139 ;
+		}
+		timing() {
+			related_pin : "QCLKIN1";
+			timing_sense : positive_unate ;
+			rise_transition : 0.0996530 ;
+			fall_transition : 0.1035500 ;
+			intrinsic_fall : 0.142 ;
+			intrinsic_rise : 0.139 ;
+		}
+		timing() {
+			related_pin : "QCLKIN2";
+			timing_sense : positive_unate ;
+			rise_transition : 0.0922950 ;
+			fall_transition : 0.1031380 ;
+			intrinsic_fall : 0.142 ;
+			intrinsic_rise : 0.139 ;
+		}
+		timing() {
+			related_pin : "HSCKIN";
+			timing_sense : positive_unate ;
+			rise_transition : 0.0922950 ;
+			fall_transition : 0.1031380 ;
+			intrinsic_fall : 0.165 ;
+			intrinsic_rise : 0.160 ;
+		}
+	}
+
+}
+

@@ -1,0 +1,23 @@
+"CLOCK" cell POLARPRO_III kfactor 0.1
+
+PORT DELAY {
+	pin ( IC ) {
+
+		direction	: output ;
+		capacitance	: 0.0 ;
+		timing() {
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			rise_transition : 0.9146160 ;
+			fall_transition : 0.9152380 ;
+			intrinsic_fall : 0.201 ;
+			intrinsic_rise : 0.203 ;
+		}
+	}
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.207655 ;
+	}
+
+}
+
