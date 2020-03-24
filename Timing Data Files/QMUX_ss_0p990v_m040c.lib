@@ -1,0 +1,58 @@
+QMUX cell QLAL4S3B kfactor 1.0
+
+/************************************************************************/
+/*	SLEW RATE:							*/
+/*	QMUX clk_in							*/
+/*			SSm40 - 177ps/148ps				*/
+/*			FFm40 - 150ps/145ps				*/
+/************************************************************************/
+
+PORT DELAY {
+
+    pin ( HSCKIN ) {
+        direction  : input;
+    }
+
+    pin ( IS0 ) {
+        direction  : input;
+    }
+
+    pin ( IS1 ) {
+        direction  : input;
+    }
+
+    pin ( IZ ) {
+        direction  : output;
+        timing () { 
+            sdf_cond : "IS0 == 1'b0 && IS1 == 1'b0";
+            related_pin : "QCLKIN0";
+            when : "IS0 == 1'b0 && IS1 == 1'b0";
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            intrinsic_rise : 0.170;
+            intrinsic_fall : 0.186;
+        }
+        timing () { 
+            sdf_cond : "IS0 == 1'b1 && IS1 == 1'b1";
+            related_pin : "HSCKIN";
+            when : "IS0 == 1'b1 && IS1 == 1'b1";
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            intrinsic_rise : 1.504;
+            intrinsic_fall : 1.296;
+        }
+        timing () { 
+            sdf_cond : "IS0 == 1'b1 && IS1 == 1'b1";
+            related_pin : "HSCKIN";
+            when : "IS0 == 1'b1 && IS1 == 1'b1";
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            intrinsic_rise : 1.197;
+            intrinsic_fall : 1.310;
+        }
+    }
+
+    pin ( QCLKIN0 ) {
+        direction  : input;
+    }
+}

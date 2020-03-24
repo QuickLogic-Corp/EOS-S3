@@ -1,0 +1,63 @@
+GMUX cell QLAL4S3B kfactor 1.0
+
+/************************************************************************/
+/*	SLEW RATE:							*/
+/*	GMUX clk_in							*/
+/*			SSM40 - 33ps/30ps				*/
+/*			FFm40 - 12ps/9ps				*/
+/*	GMUX HSCKIN							*/
+/*			SSm40 - 850ps/850ps				*/
+/*			FFm40 - 200ps/200ps				*/
+/************************************************************************/
+
+PORT DELAY {
+
+    pin ( IC ) {
+        direction  : input;
+    }
+
+    pin ( IP ) {
+        direction  : input;
+    }
+
+    pin ( IS0 ) {
+        direction  : input;
+    }
+
+    pin ( IS1 ) {
+        direction  : input;
+    }
+
+    pin ( IZ ) {
+        direction  : output;
+        timing () { 
+            sdf_cond : "IS0 == 1'b0";
+            related_pin : "IP";
+            when : "IS0 == 1'b0";
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            intrinsic_rise : 0.173;
+            intrinsic_fall : 0.173;
+        }
+        timing () { 
+            sdf_cond : "IS0 == 1'b1";
+            related_pin : "IC";
+            when : "IS0 == 1'b1";
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            intrinsic_rise : 0.321;
+            intrinsic_fall : 0.307;
+        }
+        timing () { 
+            sdf_cond : "IS0 == 1'b1";
+            related_pin : "IC";
+            when : "IS0 == 1'b1";
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            intrinsic_rise : 0.292;
+            intrinsic_fall : 0.305;
+        }
+    }
+    
+}
+
