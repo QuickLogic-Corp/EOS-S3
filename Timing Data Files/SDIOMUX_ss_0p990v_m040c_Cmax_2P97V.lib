@@ -1,0 +1,1134 @@
+SDIOMUX cell QLAL4S3B kfactor 1.00 instance SFB_0_IO 
+
+PORT DELAY {
+
+
+	
+	pin ( OQI ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( OE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			sdf_cond : "IE == 1'b1";
+	        when : "IE == 1'b1 && OE == 1'b1";	         
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			timing_type : combinational ;
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+			intrinsic_rise_max  : 14.085 ;
+			intrinsic_rise_min  : 11.146 ;
+			intrinsic_fall_max  : 13.945 ;
+			intrinsic_fall_min  : 11.220 ;
+		}
+	}
+	
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+
+		timing() {		
+			sdf_cond : "OE == 1'b0";
+	        when : "IE == 1'b0 && OE == 1'b0";
+			timing_sense : positive_unate;
+			timing_type : combinational ;
+			related_pin : "OQI";
+			intrinsic_rise_max  : 11.311 ;
+			intrinsic_rise_min  : 8.931 ;
+			intrinsic_fall_max  : 9.750 ;        
+			intrinsic_fall_min  : 8.107 ;        
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_disable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 15.833 ;
+          intrinsic_rise_min  : 12.950 ;
+          intrinsic_fall_max  : 15.848 ;
+          intrinsic_fall_min  : 12.965 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_enable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 14.627 ;
+          intrinsic_rise_min  : 12.125 ;
+          intrinsic_fall_max  : 14.841 ;
+          intrinsic_fall_min  : 12.339 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+	}
+}
+
+SDIOMUX cell QLAL4S3B kfactor 1.00 instance SFB_1_IO 
+
+PORT DELAY {
+
+
+	
+	pin ( OQI ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( OE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			sdf_cond : "IE == 1'b1";
+	        when : "IE == 1'b1 && OE == 1'b1";	         
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			timing_type : combinational ;
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+			intrinsic_rise_max  : 13.227 ;
+			intrinsic_rise_min  : 10.063 ;
+			intrinsic_fall_max  : 12.706 ;
+			intrinsic_fall_min  : 9.690 ;
+		}
+	}
+	
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+
+		timing() {		
+			sdf_cond : "OE == 1'b0";
+	        when : "IE == 1'b0 && OE == 1'b0";
+			timing_sense : positive_unate;
+			timing_type : combinational ;
+			related_pin : "OQI";
+			intrinsic_rise_max  : 10.978 ;
+			intrinsic_rise_min  : 9.367 ;
+			intrinsic_fall_max  : 10.896 ;        
+			intrinsic_fall_min  : 9.316 ;        
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_disable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 11.608 ;
+          intrinsic_rise_min  : 9.133 ;
+          intrinsic_fall_max  : 11.624 ;
+          intrinsic_fall_min  : 9.149 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_enable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 11.729 ;
+          intrinsic_rise_min  : 8.858 ;
+          intrinsic_fall_max  : 11.945 ;
+          intrinsic_fall_min  : 9.073 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+	}
+}
+
+SDIOMUX cell QLAL4S3B kfactor 1.00 instance SFB_2_IO 
+
+PORT DELAY {
+
+
+	
+	pin ( OQI ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( OE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			sdf_cond : "IE == 1'b1";
+	        when : "IE == 1'b1 && OE == 1'b1";	         
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			timing_type : combinational ;
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+			intrinsic_rise_max  : 11.703 ;
+			intrinsic_rise_min  : 8.875 ;
+			intrinsic_fall_max  : 11.627 ;
+			intrinsic_fall_min  : 8.822 ;
+		}
+	}
+	
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+
+		timing() {		
+			sdf_cond : "OE == 1'b0";
+	        when : "IE == 1'b0 && OE == 1'b0";
+			timing_sense : positive_unate;
+			timing_type : combinational ;
+			related_pin : "OQI";
+			intrinsic_rise_max  : 18.256 ;
+			intrinsic_rise_min  : 14.401 ;
+			intrinsic_fall_max  : 16.023 ;        
+			intrinsic_fall_min  : 13.125 ;        
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_disable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 14.401 ;
+          intrinsic_rise_min  : 10.633 ;
+          intrinsic_fall_max  : 14.416 ;
+          intrinsic_fall_min  : 10.648 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_enable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 12.923 ;
+          intrinsic_rise_min  : 9.451 ;
+          intrinsic_fall_max  : 13.139 ;
+          intrinsic_fall_min  : 9.667 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+	}
+}
+
+SDIOMUX cell QLAL4S3B kfactor 1.00 instance SFB_3_IO 
+
+PORT DELAY {
+
+
+	
+	pin ( OQI ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( OE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			sdf_cond : "IE == 1'b1";
+	        when : "IE == 1'b1 && OE == 1'b1";	         
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			timing_type : combinational ;
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+			intrinsic_rise_max  : 13.831 ;
+			intrinsic_rise_min  : 10.097 ;
+			intrinsic_fall_max  : 14.834 ;
+			intrinsic_fall_min  : 10.177 ;
+		}
+	}
+	
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+
+		timing() {		
+			sdf_cond : "OE == 1'b0";
+	        when : "IE == 1'b0 && OE == 1'b0";
+			timing_sense : positive_unate;
+			timing_type : combinational ;
+			related_pin : "OQI";
+			intrinsic_rise_max  : 9.547 ;
+			intrinsic_rise_min  : 7.958 ;
+			intrinsic_fall_max  : 8.786 ;        
+			intrinsic_fall_min  : 7.606 ;        
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_disable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 12.372 ;
+          intrinsic_rise_min  : 9.445 ;
+          intrinsic_fall_max  : 12.387 ;
+          intrinsic_fall_min  : 9.460 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_enable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 12.814 ;
+          intrinsic_rise_min  : 9.321 ;
+          intrinsic_fall_max  : 13.030 ;
+          intrinsic_fall_min  : 9.537 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+	}
+}
+
+SDIOMUX cell QLAL4S3B kfactor 1.00 instance SFB_4_IO 
+
+PORT DELAY {
+
+
+	
+	pin ( OQI ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( OE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			sdf_cond : "IE == 1'b1";
+	        when : "IE == 1'b1 && OE == 1'b1";	         
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			timing_type : combinational ;
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+			intrinsic_rise_max  : 9.345 ;
+			intrinsic_rise_min  : 6.954 ;
+			intrinsic_fall_max  : 9.235 ;
+			intrinsic_fall_min  : 6.904 ;
+		}
+	}
+	
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+
+		timing() {		
+			sdf_cond : "OE == 1'b0";
+	        when : "IE == 1'b0 && OE == 1'b0";
+			timing_sense : positive_unate;
+			timing_type : combinational ;
+			related_pin : "OQI";
+			intrinsic_rise_max  : 11.838 ;
+			intrinsic_rise_min  : 9.506 ;
+			intrinsic_fall_max  : 11.597 ;        
+			intrinsic_fall_min  : 9.287 ;        
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_disable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 11.317 ;
+          intrinsic_rise_min  : 8.978 ;
+          intrinsic_fall_max  : 11.332 ;
+          intrinsic_fall_min  : 8.994 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_enable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 10.661 ;
+          intrinsic_rise_min  : 8.235 ;
+          intrinsic_fall_max  : 10.876 ;
+          intrinsic_fall_min  : 8.450 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+	}
+}
+
+SDIOMUX cell QLAL4S3B kfactor 1.00 instance SFB_5_IO 
+
+PORT DELAY {
+
+
+	
+	pin ( OQI ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( OE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			sdf_cond : "IE == 1'b1";
+	        when : "IE == 1'b1 && OE == 1'b1";	         
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			timing_type : combinational ;
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+			intrinsic_rise_max  : 12.341 ;
+			intrinsic_rise_min  : 9.239 ;
+			intrinsic_fall_max  : 13.243 ;
+			intrinsic_fall_min  : 9.738 ;
+		}
+	}
+	
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+
+		timing() {		
+			sdf_cond : "OE == 1'b0";
+	        when : "IE == 1'b0 && OE == 1'b0";
+			timing_sense : positive_unate;
+			timing_type : combinational ;
+			related_pin : "OQI";
+			intrinsic_rise_max  : 9.699 ;
+			intrinsic_rise_min  : 7.942 ;
+			intrinsic_fall_max  : 8.511 ;        
+			intrinsic_fall_min  : 7.302 ;        
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_disable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 12.307 ;
+          intrinsic_rise_min  : 9.499 ;
+          intrinsic_fall_max  : 12.322 ;
+          intrinsic_fall_min  : 9.514 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_enable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 12.586 ;
+          intrinsic_rise_min  : 9.535 ;
+          intrinsic_fall_max  : 12.801 ;
+          intrinsic_fall_min  : 9.751 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+	}
+}
+
+SDIOMUX cell QLAL4S3B kfactor 1.00 instance SFB_6_IO 
+
+PORT DELAY {
+
+
+	
+	pin ( OQI ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( OE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			sdf_cond : "IE == 1'b1";
+	        when : "IE == 1'b1 && OE == 1'b1";	         
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			timing_type : combinational ;
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+			intrinsic_rise_max  : 11.342 ;
+			intrinsic_rise_min  : 8.334 ;
+			intrinsic_fall_max  : 11.444 ;
+			intrinsic_fall_min  : 8.484 ;
+		}
+	}
+	
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+
+		timing() {		
+			sdf_cond : "OE == 1'b0";
+	        when : "IE == 1'b0 && OE == 1'b0";
+			timing_sense : positive_unate;
+			timing_type : combinational ;
+			related_pin : "OQI";
+			intrinsic_rise_max  : 11.549 ;
+			intrinsic_rise_min  : 9.107 ;
+			intrinsic_fall_max  : 12.754 ;        
+			intrinsic_fall_min  : 9.281 ;        
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_disable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 11.169 ;
+          intrinsic_rise_min  : 9.317 ;
+          intrinsic_fall_max  : 11.184 ;
+          intrinsic_fall_min  : 9.332 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_enable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 10.895 ;
+          intrinsic_rise_min  : 9.041 ;
+          intrinsic_fall_max  : 11.110 ;
+          intrinsic_fall_min  : 9.256 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+	}
+}
+
+SDIOMUX cell QLAL4S3B kfactor 1.00 instance SFB_7_IO 
+
+PORT DELAY {
+
+
+	
+	pin ( OQI ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( OE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			sdf_cond : "IE == 1'b1";
+	        when : "IE == 1'b1 && OE == 1'b1";	         
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			timing_type : combinational ;
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+			intrinsic_rise_max  : 13.256 ;
+			intrinsic_rise_min  : 10.097 ;
+			intrinsic_fall_max  : 13.353 ;
+			intrinsic_fall_min  : 10.208 ;
+		}
+	}
+	
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+
+		timing() {		
+			sdf_cond : "OE == 1'b0";
+	        when : "IE == 1'b0 && OE == 1'b0";
+			timing_sense : positive_unate;
+			timing_type : combinational ;
+			related_pin : "OQI";
+			intrinsic_rise_max  : 9.611 ;
+			intrinsic_rise_min  : 7.812 ;
+			intrinsic_fall_max  : 9.911 ;        
+			intrinsic_fall_min  : 8.161 ;        
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_disable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 13.502 ;
+          intrinsic_rise_min  : 9.454 ;
+          intrinsic_fall_max  : 13.519 ;
+          intrinsic_fall_min  : 9.472 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_enable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 13.045 ;
+          intrinsic_rise_min  : 9.071 ;
+          intrinsic_fall_max  : 13.261 ;
+          intrinsic_fall_min  : 9.287 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+	}
+}
+
+SDIOMUX cell QLAL4S3B kfactor 1.00 instance SFB_8_IO 
+
+PORT DELAY {
+
+
+	
+	pin ( OQI ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( OE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			sdf_cond : "IE == 1'b1";
+	        when : "IE == 1'b1 && OE == 1'b1";	         
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			timing_type : combinational ;
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+			intrinsic_rise_max  : 14.631 ;
+			intrinsic_rise_min  : 11.231 ;
+			intrinsic_fall_max  : 14.622 ;
+			intrinsic_fall_min  : 11.096 ;
+		}
+	}
+	
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+
+		timing() {		
+			sdf_cond : "OE == 1'b0";
+	        when : "IE == 1'b0 && OE == 1'b0";
+			timing_sense : positive_unate;
+			timing_type : combinational ;
+			related_pin : "OQI";
+			intrinsic_rise_max  : 14.257 ;
+			intrinsic_rise_min  : 11.151 ;
+			intrinsic_fall_max  : 13.708 ;        
+			intrinsic_fall_min  : 11.082 ;        
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_disable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 13.489 ;
+          intrinsic_rise_min  : 10.635 ;
+          intrinsic_fall_max  : 13.504 ;
+          intrinsic_fall_min  : 10.650 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_enable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 12.834 ;
+          intrinsic_rise_min  : 9.960 ;
+          intrinsic_fall_max  : 13.050 ;
+          intrinsic_fall_min  : 10.176 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+	}
+}
+
+SDIOMUX cell QLAL4S3B kfactor 1.00 instance SFB_9_IO 
+
+PORT DELAY {
+
+
+	
+	pin ( OQI ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( OE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			sdf_cond : "IE == 1'b1";
+	        when : "IE == 1'b1 && OE == 1'b1";	         
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			timing_type : combinational ;
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+			intrinsic_rise_max  : 16.192 ;
+			intrinsic_rise_min  : 12.735 ;
+			intrinsic_fall_max  : 16.736 ;
+			intrinsic_fall_min  : 12.908 ;
+		}
+	}
+	
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+
+		timing() {		
+			sdf_cond : "OE == 1'b0";
+	        when : "IE == 1'b0 && OE == 1'b0";
+			timing_sense : positive_unate;
+			timing_type : combinational ;
+			related_pin : "OQI";
+			intrinsic_rise_max  : 10.260 ;
+			intrinsic_rise_min  : 8.794 ;
+			intrinsic_fall_max  : 9.643 ;        
+			intrinsic_fall_min  : 8.530 ;        
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_disable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 11.590 ;
+          intrinsic_rise_min  : 9.109 ;
+          intrinsic_fall_max  : 11.605 ;
+          intrinsic_fall_min  : 9.124 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_enable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 11.367 ;
+          intrinsic_rise_min  : 8.715 ;
+          intrinsic_fall_max  : 11.583 ;
+          intrinsic_fall_min  : 8.931 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+	}
+}
+
+SDIOMUX cell QLAL4S3B kfactor 1.00 instance SFB_10_IO 
+
+PORT DELAY {
+
+
+	
+	pin ( OQI ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( OE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			sdf_cond : "IE == 1'b1";
+	        when : "IE == 1'b1 && OE == 1'b1";	         
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			timing_type : combinational ;
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+			intrinsic_rise_max  : 14.064 ;
+			intrinsic_rise_min  : 10.283 ;
+			intrinsic_fall_max  : 14.979 ;
+			intrinsic_fall_min  : 10.747 ;
+		}
+	}
+	
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+
+		timing() {		
+			sdf_cond : "OE == 1'b0";
+	        when : "IE == 1'b0 && OE == 1'b0";
+			timing_sense : positive_unate;
+			timing_type : combinational ;
+			related_pin : "OQI";
+			intrinsic_rise_max  : 8.557 ;
+			intrinsic_rise_min  : 7.128 ;
+			intrinsic_fall_max  : 9.241 ;        
+			intrinsic_fall_min  : 7.350 ;        
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_disable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 13.351 ;
+          intrinsic_rise_min  : 10.022 ;
+          intrinsic_fall_max  : 13.366 ;
+          intrinsic_fall_min  : 10.037 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_enable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 12.766 ;
+          intrinsic_rise_min  : 9.301 ;
+          intrinsic_fall_max  : 12.982 ;
+          intrinsic_fall_min  : 9.517 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+	}
+}
+
+SDIOMUX cell QLAL4S3B kfactor 1.00 instance SFB_11_IO 
+
+PORT DELAY {
+
+
+	
+	pin ( OQI ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( OE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			sdf_cond : "IE == 1'b1";
+	        when : "IE == 1'b1 && OE == 1'b1";	         
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			timing_type : combinational ;
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+			intrinsic_rise_max  : 12.015 ;
+			intrinsic_rise_min  : 8.699 ;
+			intrinsic_fall_max  : 12.326 ;
+			intrinsic_fall_min  : 8.932 ;
+		}
+	}
+	
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+
+		timing() {		
+			sdf_cond : "OE == 1'b0";
+	        when : "IE == 1'b0 && OE == 1'b0";
+			timing_sense : positive_unate;
+			timing_type : combinational ;
+			related_pin : "OQI";
+			intrinsic_rise_max  : 13.911 ;
+			intrinsic_rise_min  : 9.249 ;
+			intrinsic_fall_max  : 15.141 ;        
+			intrinsic_fall_min  : 10.135 ;        
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_disable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 10.977 ;
+          intrinsic_rise_min  : 8.601 ;
+          intrinsic_fall_max  : 10.992 ;
+          intrinsic_fall_min  : 8.617 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_enable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 10.811 ;
+          intrinsic_rise_min  : 8.142 ;
+          intrinsic_fall_max  : 11.026 ;
+          intrinsic_fall_min  : 8.357 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+	}
+}
+
+SDIOMUX cell QLAL4S3B kfactor 1.00 instance SFB_12_IO 
+
+PORT DELAY {
+
+
+	
+	pin ( OQI ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( OE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			sdf_cond : "IE == 1'b1";
+	        when : "IE == 1'b1 && OE == 1'b1";	         
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			timing_type : combinational ;
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+			intrinsic_rise_max  : 11.192 ;
+			intrinsic_rise_min  : 8.842 ;
+			intrinsic_fall_max  : 11.676 ;
+			intrinsic_fall_min  : 8.918 ;
+		}
+	}
+	
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+
+		timing() {		
+			sdf_cond : "OE == 1'b0";
+	        when : "IE == 1'b0 && OE == 1'b0";
+			timing_sense : positive_unate;
+			timing_type : combinational ;
+			related_pin : "OQI";
+			intrinsic_rise_max  : 13.949 ;
+			intrinsic_rise_min  : 10.255 ;
+			intrinsic_fall_max  : 14.526 ;        
+			intrinsic_fall_min  : 10.362 ;        
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_disable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 15.917 ;
+          intrinsic_rise_min  : 11.419 ;
+          intrinsic_fall_max  : 15.932 ;
+          intrinsic_fall_min  : 11.434 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_enable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 16.111 ;
+          intrinsic_rise_min  : 11.155 ;
+          intrinsic_fall_max  : 16.327 ;
+          intrinsic_fall_min  : 11.371 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+	}
+}
+
+SDIOMUX cell QLAL4S3B kfactor 1.00 instance SFB_13_IO 
+
+PORT DELAY {
+
+
+	
+	pin ( OQI ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( OE ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+	}
+
+	pin ( IZ ) {
+		direction	: output ;
+		capacitance	: 0.000 ;
+		timing() {
+			sdf_cond : "IE == 1'b1";
+	        when : "IE == 1'b1 && OE == 1'b1";	         
+			related_pin : "IP";
+			timing_sense : positive_unate ;
+			timing_type : combinational ;
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+			intrinsic_rise_max  : 8.895 ;
+			intrinsic_rise_min  : 7.917 ;
+			intrinsic_fall_max  : 9.008 ;
+			intrinsic_fall_min  : 8.082 ;
+		}
+	}
+	
+	pin ( IP ) {
+		direction	: input ;
+		capacitance	: 0.000 ;
+
+		timing() {		
+			sdf_cond : "OE == 1'b0";
+	        when : "IE == 1'b0 && OE == 1'b0";
+			timing_sense : positive_unate;
+			timing_type : combinational ;
+			related_pin : "OQI";
+			intrinsic_rise_max  : 14.403 ;
+			intrinsic_rise_min  : 11.260 ;
+			intrinsic_fall_max  : 15.993 ;        
+			intrinsic_fall_min  : 11.817 ;        
+			fall_resistance : 0.000 ;
+			rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_disable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 13.753 ;
+          intrinsic_rise_min  : 11.354 ;
+          intrinsic_fall_max  : 13.768 ;
+          intrinsic_fall_min  : 11.370 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+		timing() {
+          timing_sense : negative_unate;
+          timing_type : three_state_enable ;
+          related_pin : "OE";
+          intrinsic_rise_max  : 13.486 ;
+          intrinsic_rise_min  : 10.786 ;
+          intrinsic_fall_max  : 13.701 ;
+          intrinsic_fall_min  : 11.002 ;
+		  fall_resistance : 0.000 ;
+          rise_resistance : 0.000 ;
+        }
+	}
+}
+

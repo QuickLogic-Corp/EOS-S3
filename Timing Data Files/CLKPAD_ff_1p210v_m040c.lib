@@ -1,0 +1,26 @@
+"CLOCK" cell QLAL4S3B kfactor 1.0
+
+/************************************************************************/
+/*	SLEW RATE:							*/
+/*  CLK_PAD SSm40 - 1.17ns/1.17ns					*/
+/* 			FFm40 - 7ps/7ps/7p				*/	
+/************************************************************************/
+
+PORT DELAY {
+
+    pin ( IC ) {
+        direction  : output;
+        timing () { 
+            related_pin : "IP";
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            intrinsic_rise : 0.167;
+            intrinsic_fall : 0.169;
+        }
+    }
+
+    pin ( IP ) {
+        direction  : input;
+    }
+
+}

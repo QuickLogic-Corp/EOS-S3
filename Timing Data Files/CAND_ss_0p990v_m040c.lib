@@ -1,0 +1,39 @@
+CAND cell QLAL4S3B kfactor 1.0
+	
+/************************************************************************/
+/*	SLEW RATE:							*/
+/*	CAND 								*/
+/*			SSm40 - 274ps/234ps				*/
+/*			FFm40 - 127ps/101ps				*/
+/************************************************************************/
+
+PORT DELAY {
+
+    pin ( EN ) {
+        direction  : input;
+    }
+
+    pin ( IC ) {
+        direction  : input;
+    }
+
+    pin ( IZ ) {
+        direction  : output;
+        timing () {
+            related_pin : "IC";
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            intrinsic_rise : 0.345;
+            intrinsic_fall : 0.299;
+        }
+        timing () {
+            related_pin : "EN";
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            intrinsic_rise : 0.377;
+            intrinsic_fall : 0.367;
+        }
+    }
+
+}
+
