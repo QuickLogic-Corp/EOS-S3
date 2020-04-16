@@ -1,4 +1,4 @@
-LOGIC3 cell QLAL4S3B kfactor 1.25
+LOGIC3 cell QLAL4S3B kfactor 1.1
 
 PORT DELAY {
 	pin ( QST ) {

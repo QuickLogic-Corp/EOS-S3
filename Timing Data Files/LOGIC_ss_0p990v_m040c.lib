@@ -1,4 +1,4 @@
-LOGIC3 cell QLAL4S3B kfactor 1.1
+LOGIC3 cell QLAL4S3B kfactor 0.95
 
 PORT DELAY {
 	pin ( QST ) {
@@ -6,7 +6,7 @@ PORT DELAY {
 		capacitance	: 0.0114864 ;
 		timing() {
 			sdf_cond : "QEN_EQ_1_AN_QRT_EQ_0_QCKS_1";
-			when : "QEN == 1'b1 && QRT == 1'b0 && QCKS == 1'b1";
+			when : "QEN == 1'b1&& QRT == 1'b0 && QCKS == 1'b1";
 			related_pin : "QCK";
 			timing_type : removal_rising ;
 			intrinsic_fall : 0.485 ;
