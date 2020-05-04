@@ -9926,7 +9926,7 @@
           <cell name="SFB_13_IO" />
         </Pin>     
       </Pins>
-    </PACKAGE/>
+    </PACKAGE>
     <PACKAGE name="BGA">
       <Pins>
         <Pin name="B1">
@@ -10068,7 +10068,7 @@
           <cell name="SFB_13_IO" />
         </Pin>     
       </Pins>
-    </PACKAGE/>
+    </PACKAGE>
     <PACKAGE name="QFN">
       <Pins>
         <Pin name="4">
@@ -10210,7 +10210,7 @@
           <cell name="SFB_13_IO" />
         </Pin>     
       </Pins>
-    </PACKAGE/>
+    </PACKAGE>
   </Packages>
   <Programming>
     <CdlToInvPortInfo>
